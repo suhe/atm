@@ -1,0 +1,13 @@
+E:\My Project\ATM\ATM\bin\Debug\ATM.exe
+E:\My Project\ATM\ATM\bin\Debug\ATM.pdb
+E:\My Project\ATM\ATM\obj\x86\Debug\ATM.frmMainMenu.resources
+E:\My Project\ATM\ATM\obj\x86\Debug\ATM.Forms.frmUser.resources
+E:\My Project\ATM\ATM\obj\x86\Debug\ATM.Properties.Resources.resources
+E:\My Project\ATM\ATM\obj\x86\Debug\ATM.csproj.GenerateResource.Cache
+E:\My Project\ATM\ATM\obj\x86\Debug\ATM.exe.licenses
+E:\My Project\ATM\ATM\obj\x86\Debug\ATM.exe
+E:\My Project\ATM\ATM\obj\x86\Debug\ATM.pdb
+E:\My Project\ATM\ATM\obj\x86\Debug\ATM.Forms.UserForm.frmSearch.resources
+E:\My Project\ATM\ATM\obj\x86\Debug\ATM.Forms.UserForm.frmForm.resources
+E:\My Project\ATM\ATM\obj\x86\Debug\ATM.Forms.frmSetting.resources
+E:\My Project\ATM\ATM\obj\x86\Debug\ATM.Forms.frmLogin.resources
