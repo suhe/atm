@@ -71,6 +71,71 @@ namespace ATM.Models
             conn.CloseDB();
             return true;
         }
+
+        public bool FindByCode(string byCode)
+        {
+            SqlCommand cmd = new SqlCommand();
+            Connection conn = new Connection();
+            cmd.CommandText = "[dbo].[Sp_Single_By_Code_Office]";
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.Add(new SqlParameter("@OfficeCode", byCode));
+            cmd.Connection = conn.OpenDB();
+            SqlDataReader DR = cmd.ExecuteReader();
+            //binding data
+            if (DR.Read())
+            {
+                conn.CloseDB();
+                return true;
+            }
+            //FirstName = "Test";
+            conn.CloseDB();
+            return false;
+        }
+
+        public bool Insert()
+        {
+            SqlCommand cmd = new SqlCommand();
+            Connection conn = new Connection();
+            cmd.CommandText = "[dbo].[Sp_Insert_Office]";
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.Add(new SqlParameter("@OfficeCode", OfficeCode));
+            cmd.Parameters.Add(new SqlParameter("@BankID", BankID));
+            cmd.Parameters.Add(new SqlParameter("@OfficeName", OfficeName));
+            cmd.Parameters.Add(new SqlParameter("@Address", Address));
+            cmd.Parameters.Add(new SqlParameter("@CityKey", CityKey));
+            cmd.Parameters.Add(new SqlParameter("@ProvinceKey", ProvinceKey));
+            cmd.Parameters.Add(new SqlParameter("@SatKerKey", SetKerKey));
+            cmd.Parameters.Add(new SqlParameter("@KliringKey", KliringKey));
+            cmd.Parameters.Add(new SqlParameter("@ContactPhone", ContactPhone));
+            cmd.Connection = conn.OpenDB();
+            cmd.ExecuteNonQuery();
+            conn.CloseDB();
+            return true;
+
+        }
+
+        public bool Update()
+        {
+            SqlCommand cmd = new SqlCommand();
+            Connection conn = new Connection();
+            cmd.CommandText = "[dbo].[Sp_Update_Office]";
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.Add(new SqlParameter("@OfficeID", OfficeID));
+            cmd.Parameters.Add(new SqlParameter("@BankID", BankID));
+            cmd.Parameters.Add(new SqlParameter("@OfficeName", OfficeName));
+            cmd.Parameters.Add(new SqlParameter("@Address", Address));
+            cmd.Parameters.Add(new SqlParameter("@CityKey", CityKey));
+            cmd.Parameters.Add(new SqlParameter("@ProvinceKey", ProvinceKey));
+            cmd.Parameters.Add(new SqlParameter("@SatKerKey", SetKerKey));
+            cmd.Parameters.Add(new SqlParameter("@KliringKey", KliringKey));
+            cmd.Parameters.Add(new SqlParameter("@ContactPhone", ContactPhone));
+            cmd.Connection = conn.OpenDB();
+            cmd.ExecuteNonQuery();
+            conn.CloseDB();
+            return true;
+
+        }
+
     }
 
         

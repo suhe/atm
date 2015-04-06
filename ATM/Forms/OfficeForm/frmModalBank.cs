@@ -51,10 +51,46 @@ namespace ATM.Forms.OfficeForm
             string code = (gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "BankCode").ToString());
             frmForm.BankID = id;
             frmForm.BankCode = code;
+            //for foregin key 
+            Office.BankID = id;
             this.loadBankData();
             this.Close();
-        }   
+        }
 
+        private void frmModalBank_Load(object sender, EventArgs e)
+        {
+            txtSearch.Focus();
+        }
+
+        private void btnFind_Click(object sender, EventArgs e)
+        {
+            switch (cmbType.Text)
+            {
+                case "Bank Code" :
+                    bankCode = txtSearch.Text;
+                    bankName = "";
+                    break;
+                case "Bank Name" :
+                    bankCode = "";
+                    bankName = txtSearch.Text;
+                    break;
+                default:
+                    bankCode = "";
+                    bankName = "";
+                    break;
+            }
+            this.loadData();
+        }
+
+        private void btnReset_Click(object sender, EventArgs e)
+        {
+            cmbType.Text = "Bank Code";
+            bankCode = "";
+            bankName = "";
+            this.loadData();
+        }
+
+        
 
        
     }

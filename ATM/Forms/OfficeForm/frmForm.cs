@@ -70,42 +70,58 @@ namespace ATM.Forms.OfficeForm
         {
             Validation validate = new Validation();
             //required
-            bool FirstName = validate.isRequired(txtOfficeCode.Text, "* First Name : Required Do Not Empty");
-            bool LastName = validate.isRequired(txtBankCode.Text, "* Last Name : Required Do Not Empty");
-            bool UserName = validate.isRequired(txtOfficeName.Text, "* User Name : Required Do Not Empty");
-            bool Password = validate.isRequired(txtAddress.Text, "* Password : Required Do Not Empty");
-     
-            if (FirstName && LastName && UserName && Password)
+            bool OfficeCode = validate.isRequired(txtOfficeCode.Text, "* Office Code : Required Do Not Empty");
+            bool BankCode = validate.isRequired(txtBankCode.Text, "* Bank Code : Required Do Not Empty");
+            bool OfficeName = validate.isRequired(txtOfficeName.Text, "* Office Name : Required Do Not Empty");
+            bool Address = validate.isRequired(txtAddress.Text, "* Address : Required Do Not Empty");
+            bool CityKey = validate.isRequired(txtCityKey.Text, "* City Key : Required Do Not Empty");
+            bool ProvKey = validate.isRequired(txtProvinceKey.Text, "* Province Key : Required Do Not Empty");
+            bool satKerKey = validate.isRequired(txtSatkerKey.Text, "* Sat Key : Required Do Not Empty");
+            bool kliringKey = validate.isRequired(txtKliringKey.Text, "* Kliring Key : Required Do Not Empty");
+            bool contactPhone = validate.isRequired(txtContactPhone.Text, "* Contact Phone : Required Do Not Empty");
+
+            if (OfficeCode && BankCode && OfficeName && Address && CityKey && ProvKey && satKerKey && kliringKey && contactPhone)
+            {
+                Office model = new Office();
+                if (model.FindByCode(txtOfficeCode.Text)==true)
+                {
+                    MessageBox.Show("Office Code Has been Available Please Put Other Code !");
+                    return false;
+                }
                 return true;
+            }
+
             else
+            {
                 return false;
+            }
         }
 
         private void InsertUser()
         {
-            User model = new User();
-            User.FirstName = txtOfficeCode.Text;
-            User.LastName = txtBankCode.Text;
-            User.UserName = txtOfficeName.Text;
-            User.Password = txtAddress.Text;
-            User.Title = txtCityKey.Text;
-            User.Address = txtProvinceKey.Text;
-            User.City = txtSatkerKey.Text;
-            User.PostalCode = txtKliringKey.Text;
+            Office model = new Office();
+            Office.OfficeCode = txtOfficeCode.Text;
+            Office.OfficeName = txtOfficeName.Text;
+            Office.Address = txtAddress.Text;
+            Office.CityKey = txtCityKey.Text;
+            Office.ProvinceKey = txtProvinceKey.Text;
+            Office.SetKerKey = txtSatkerKey.Text;
+            Office.KliringKey = txtKliringKey.Text;
+            Office.ContactPhone = txtContactPhone.Text;
             model.Insert();
         }
 
         private void UpdateUser()
         {
-            User model = new User();
-            User.FirstName = txtOfficeCode.Text;
-            User.LastName = txtBankCode.Text;
-            User.UserName = txtOfficeName.Text;
-            User.Password = txtAddress.Text;
-            User.Title = txtCityKey.Text;
-            User.Address = txtProvinceKey.Text;
-            User.City = txtSatkerKey.Text;
-            User.PostalCode = txtKliringKey.Text;
+            Office model = new Office();
+            Office.OfficeCode = txtOfficeCode.Text;
+            Office.OfficeName = txtOfficeName.Text;
+            Office.Address = txtAddress.Text;
+            Office.CityKey = txtCityKey.Text;
+            Office.ProvinceKey = txtProvinceKey.Text;
+            Office.SetKerKey = txtSatkerKey.Text;
+            Office.KliringKey = txtKliringKey.Text;
+            Office.ContactPhone = txtContactPhone.Text;
             model.Update();
         }
 
