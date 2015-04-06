@@ -28,22 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DevExpress.XtraEditors.TileItemElement tileItemElement7 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement1 = new DevExpress.XtraEditors.TileItemElement();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMainMenu));
-            DevExpress.XtraEditors.TileItemElement tileItemElement8 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemElement tileItemElement9 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemElement tileItemElement10 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemElement tileItemElement11 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemElement tileItemElement12 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement2 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement3 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement4 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement5 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement6 = new DevExpress.XtraEditors.TileItemElement();
             this.tiControl = new DevExpress.XtraEditors.TileControl();
             this.tileGroup2 = new DevExpress.XtraEditors.TileGroup();
             this.tileGroup3 = new DevExpress.XtraEditors.TileGroup();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.tiSetting = new DevExpress.XtraEditors.TileItem();
             this.tiUser = new DevExpress.XtraEditors.TileItem();
             this.tiClose = new DevExpress.XtraEditors.TileItem();
-            this.tileItem3 = new DevExpress.XtraEditors.TileItem();
-            this.tileItem4 = new DevExpress.XtraEditors.TileItem();
-            this.tileItem5 = new DevExpress.XtraEditors.TileItem();
+            this.tiRekapWarkat = new DevExpress.XtraEditors.TileItem();
+            this.tiBank = new DevExpress.XtraEditors.TileItem();
+            this.tiOffice = new DevExpress.XtraEditors.TileItem();
             this.SuspendLayout();
             // 
             // tiControl
@@ -60,7 +61,7 @@
             this.tiControl.Location = new System.Drawing.Point(0, 0);
             this.tiControl.MaxId = 8;
             this.tiControl.Name = "tiControl";
-            this.tiControl.Size = new System.Drawing.Size(1457, 575);
+            this.tiControl.Size = new System.Drawing.Size(1370, 575);
             this.tiControl.TabIndex = 0;
             this.tiControl.Text = "SETTING";
             // 
@@ -74,9 +75,9 @@
             // 
             // tileGroup3
             // 
-            this.tileGroup3.Items.Add(this.tileItem3);
-            this.tileGroup3.Items.Add(this.tileItem4);
-            this.tileGroup3.Items.Add(this.tileItem5);
+            this.tileGroup3.Items.Add(this.tiRekapWarkat);
+            this.tileGroup3.Items.Add(this.tiBank);
+            this.tileGroup3.Items.Add(this.tiOffice);
             this.tileGroup3.Name = "tileGroup3";
             this.tileGroup3.Text = null;
             // 
@@ -90,11 +91,11 @@
             this.tiSetting.AppearanceItem.Normal.Options.UseForeColor = true;
             this.tiSetting.AppearanceItem.Selected.BackColor = System.Drawing.Color.ForestGreen;
             this.tiSetting.AppearanceItem.Selected.Options.UseBackColor = true;
-            tileItemElement7.Image = ((System.Drawing.Image)(resources.GetObject("tileItemElement7.Image")));
-            tileItemElement7.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopCenter;
-            tileItemElement7.Text = "SETTING";
-            tileItemElement7.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.BottomCenter;
-            this.tiSetting.Elements.Add(tileItemElement7);
+            tileItemElement1.Image = ((System.Drawing.Image)(resources.GetObject("tileItemElement1.Image")));
+            tileItemElement1.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopCenter;
+            tileItemElement1.Text = "SETTING";
+            tileItemElement1.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.BottomCenter;
+            this.tiSetting.Elements.Add(tileItemElement1);
             this.tiSetting.Id = 1;
             this.tiSetting.Name = "tiSetting";
             this.tiSetting.ItemClick += new DevExpress.XtraEditors.TileItemClickEventHandler(this.tiSetting_ItemClick);
@@ -103,11 +104,11 @@
             // 
             this.tiUser.AppearanceItem.Normal.ForeColor = System.Drawing.Color.White;
             this.tiUser.AppearanceItem.Normal.Options.UseForeColor = true;
-            tileItemElement8.Image = ((System.Drawing.Image)(resources.GetObject("tileItemElement8.Image")));
-            tileItemElement8.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopCenter;
-            tileItemElement8.Text = "SYSTEM USER";
-            tileItemElement8.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.BottomCenter;
-            this.tiUser.Elements.Add(tileItemElement8);
+            tileItemElement2.Image = ((System.Drawing.Image)(resources.GetObject("tileItemElement2.Image")));
+            tileItemElement2.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopCenter;
+            tileItemElement2.Text = "SYSTEM USER";
+            tileItemElement2.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.BottomCenter;
+            this.tiUser.Elements.Add(tileItemElement2);
             this.tiUser.Id = 2;
             this.tiUser.Name = "tiUser";
             this.tiUser.ItemClick += new DevExpress.XtraEditors.TileItemClickEventHandler(this.tiUser_ItemClick);
@@ -118,66 +119,68 @@
             this.tiClose.AppearanceItem.Normal.ForeColor = System.Drawing.Color.White;
             this.tiClose.AppearanceItem.Normal.Options.UseFont = true;
             this.tiClose.AppearanceItem.Normal.Options.UseForeColor = true;
-            tileItemElement9.Image = ((System.Drawing.Image)(resources.GetObject("tileItemElement9.Image")));
-            tileItemElement9.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopCenter;
-            tileItemElement9.Text = "EXIT SYSTEM";
-            tileItemElement9.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.BottomCenter;
-            this.tiClose.Elements.Add(tileItemElement9);
+            tileItemElement3.Image = ((System.Drawing.Image)(resources.GetObject("tileItemElement3.Image")));
+            tileItemElement3.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopCenter;
+            tileItemElement3.Text = "EXIT SYSTEM";
+            tileItemElement3.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.BottomCenter;
+            this.tiClose.Elements.Add(tileItemElement3);
             this.tiClose.Id = 7;
             this.tiClose.Name = "tiClose";
             this.tiClose.ItemClick += new DevExpress.XtraEditors.TileItemClickEventHandler(this.tiClose_ItemClick);
             // 
-            // tileItem3
+            // tiRekapWarkat
             // 
-            this.tileItem3.AppearanceItem.Normal.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tileItem3.AppearanceItem.Normal.ForeColor = System.Drawing.Color.White;
-            this.tileItem3.AppearanceItem.Normal.Options.UseFont = true;
-            this.tileItem3.AppearanceItem.Normal.Options.UseForeColor = true;
-            tileItemElement10.Image = ((System.Drawing.Image)(resources.GetObject("tileItemElement10.Image")));
-            tileItemElement10.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopCenter;
-            tileItemElement10.ImageToTextAlignment = DevExpress.XtraEditors.TileControlImageToTextAlignment.Left;
-            tileItemElement10.Text = "REKAP WARKAT";
-            this.tileItem3.Elements.Add(tileItemElement10);
-            this.tileItem3.Id = 3;
-            this.tileItem3.IsLarge = true;
-            this.tileItem3.Name = "tileItem3";
+            this.tiRekapWarkat.AppearanceItem.Normal.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tiRekapWarkat.AppearanceItem.Normal.ForeColor = System.Drawing.Color.White;
+            this.tiRekapWarkat.AppearanceItem.Normal.Options.UseFont = true;
+            this.tiRekapWarkat.AppearanceItem.Normal.Options.UseForeColor = true;
+            tileItemElement4.Image = ((System.Drawing.Image)(resources.GetObject("tileItemElement4.Image")));
+            tileItemElement4.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopCenter;
+            tileItemElement4.ImageToTextAlignment = DevExpress.XtraEditors.TileControlImageToTextAlignment.Left;
+            tileItemElement4.Text = "REKAP WARKAT";
+            this.tiRekapWarkat.Elements.Add(tileItemElement4);
+            this.tiRekapWarkat.Id = 3;
+            this.tiRekapWarkat.IsLarge = true;
+            this.tiRekapWarkat.Name = "tiRekapWarkat";
             // 
-            // tileItem4
+            // tiBank
             // 
-            this.tileItem4.AppearanceItem.Normal.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tileItem4.AppearanceItem.Normal.ForeColor = System.Drawing.Color.White;
-            this.tileItem4.AppearanceItem.Normal.Options.UseFont = true;
-            this.tileItem4.AppearanceItem.Normal.Options.UseForeColor = true;
-            tileItemElement11.Image = ((System.Drawing.Image)(resources.GetObject("tileItemElement11.Image")));
-            tileItemElement11.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopCenter;
-            tileItemElement11.ImageToTextAlignment = DevExpress.XtraEditors.TileControlImageToTextAlignment.Left;
-            tileItemElement11.Text = "MASTER BANK    ";
-            this.tileItem4.Elements.Add(tileItemElement11);
-            this.tileItem4.Id = 4;
-            this.tileItem4.IsLarge = true;
-            this.tileItem4.Name = "tileItem4";
+            this.tiBank.AppearanceItem.Normal.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tiBank.AppearanceItem.Normal.ForeColor = System.Drawing.Color.White;
+            this.tiBank.AppearanceItem.Normal.Options.UseFont = true;
+            this.tiBank.AppearanceItem.Normal.Options.UseForeColor = true;
+            tileItemElement5.Image = ((System.Drawing.Image)(resources.GetObject("tileItemElement5.Image")));
+            tileItemElement5.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopCenter;
+            tileItemElement5.ImageToTextAlignment = DevExpress.XtraEditors.TileControlImageToTextAlignment.Left;
+            tileItemElement5.Text = "MASTER BANK    ";
+            this.tiBank.Elements.Add(tileItemElement5);
+            this.tiBank.Id = 4;
+            this.tiBank.IsLarge = true;
+            this.tiBank.Name = "tiBank";
+      
             // 
-            // tileItem5
+            // tiOffice
             // 
-            this.tileItem5.AppearanceItem.Normal.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tileItem5.AppearanceItem.Normal.ForeColor = System.Drawing.Color.White;
-            this.tileItem5.AppearanceItem.Normal.Options.UseFont = true;
-            this.tileItem5.AppearanceItem.Normal.Options.UseForeColor = true;
-            tileItemElement12.Image = ((System.Drawing.Image)(resources.GetObject("tileItemElement12.Image")));
-            tileItemElement12.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.BottomCenter;
-            tileItemElement12.ImageToTextAlignment = DevExpress.XtraEditors.TileControlImageToTextAlignment.Left;
-            tileItemElement12.Text = "MASTER OFFICE";
-            this.tileItem5.Elements.Add(tileItemElement12);
-            this.tileItem5.Id = 5;
-            this.tileItem5.IsLarge = true;
-            this.tileItem5.Name = "tileItem5";
+            this.tiOffice.AppearanceItem.Normal.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tiOffice.AppearanceItem.Normal.ForeColor = System.Drawing.Color.White;
+            this.tiOffice.AppearanceItem.Normal.Options.UseFont = true;
+            this.tiOffice.AppearanceItem.Normal.Options.UseForeColor = true;
+            tileItemElement6.Image = ((System.Drawing.Image)(resources.GetObject("tileItemElement6.Image")));
+            tileItemElement6.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.BottomCenter;
+            tileItemElement6.ImageToTextAlignment = DevExpress.XtraEditors.TileControlImageToTextAlignment.Left;
+            tileItemElement6.Text = "MASTER OFFICE";
+            this.tiOffice.Elements.Add(tileItemElement6);
+            this.tiOffice.Id = 5;
+            this.tiOffice.IsLarge = true;
+            this.tiOffice.Name = "tiOffice";
+            this.tiOffice.ItemClick += new DevExpress.XtraEditors.TileItemClickEventHandler(this.tiOffice_ItemClick);
             // 
             // frmMainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1457, 575);
+            this.ClientSize = new System.Drawing.Size(1370, 575);
             this.Controls.Add(this.tiControl);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmMainMenu";
@@ -193,10 +196,11 @@
         private DevExpress.XtraEditors.TileItem tiSetting;
         private DevExpress.XtraEditors.TileItem tiUser;
         private DevExpress.XtraEditors.TileGroup tileGroup3;
-        private DevExpress.XtraEditors.TileItem tileItem3;
-        private DevExpress.XtraEditors.TileItem tileItem4;
-        private DevExpress.XtraEditors.TileItem tileItem5;
+        private DevExpress.XtraEditors.TileItem tiRekapWarkat;
+        private DevExpress.XtraEditors.TileItem tiBank;
+        private DevExpress.XtraEditors.TileItem tiOffice;
         private DevExpress.XtraEditors.TileItem tiClose;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
 
     }
 }

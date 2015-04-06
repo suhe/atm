@@ -41,5 +41,12 @@ namespace ATM
             var frm = new Forms.frmSetting();
             frm.Show();
         }
+
+       
+        private void tiOffice_ItemClick(object sender, TileItemEventArgs e)
+        {
+            var frm = new Forms.frmOffice();
+            frm.Show();
+        }
     }
 }

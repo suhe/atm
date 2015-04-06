@@ -11,3 +11,20 @@ E:\My Project\ATM\ATM\obj\x86\Debug\ATM.Forms.UserForm.frmSearch.resources
 E:\My Project\ATM\ATM\obj\x86\Debug\ATM.Forms.UserForm.frmForm.resources
 E:\My Project\ATM\ATM\obj\x86\Debug\ATM.Forms.frmSetting.resources
 E:\My Project\ATM\ATM\obj\x86\Debug\ATM.Forms.frmLogin.resources
+D:\xampp\htdocs\ATM\ATM\obj\x86\Debug\ATM.exe
+D:\xampp\htdocs\ATM\ATM\obj\x86\Debug\ATM.pdb
+D:\xampp\htdocs\ATM\ATM\bin\Debug\ATM.exe
+D:\xampp\htdocs\ATM\ATM\bin\Debug\ATM.pdb
+D:\xampp\htdocs\ATM\ATM\obj\x86\Debug\ATM.Forms.frmLogin.resources
+D:\xampp\htdocs\ATM\ATM\obj\x86\Debug\ATM.Forms.frmSetting.resources
+D:\xampp\htdocs\ATM\ATM\obj\x86\Debug\ATM.Forms.frmUser.resources
+D:\xampp\htdocs\ATM\ATM\obj\x86\Debug\ATM.Forms.UserForm.frmForm.resources
+D:\xampp\htdocs\ATM\ATM\obj\x86\Debug\ATM.Forms.UserForm.frmSearch.resources
+D:\xampp\htdocs\ATM\ATM\obj\x86\Debug\ATM.frmMainMenu.resources
+D:\xampp\htdocs\ATM\ATM\obj\x86\Debug\ATM.Properties.Resources.resources
+D:\xampp\htdocs\ATM\ATM\obj\x86\Debug\ATM.csproj.GenerateResource.Cache
+D:\xampp\htdocs\ATM\ATM\obj\x86\Debug\ATM.exe.licenses
+D:\xampp\htdocs\ATM\ATM\obj\x86\Debug\ATM.Forms.frmOffice.resources
+D:\xampp\htdocs\ATM\ATM\obj\x86\Debug\ATM.Forms.OfficeForm.frmSearch.resources
+D:\xampp\htdocs\ATM\ATM\obj\x86\Debug\ATM.Forms.OfficeForm.frmForm.resources
+D:\xampp\htdocs\ATM\ATM\obj\x86\Debug\ATM.Forms.OfficeForm.frmModalBank.resources
