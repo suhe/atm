@@ -45,7 +45,19 @@ namespace ATM
        
         private void tiOffice_ItemClick(object sender, TileItemEventArgs e)
         {
-            var frm = new Forms.frmOffice();
+            Forms.frmOffice frm = new Forms.frmOffice();
+            frm.Show();
+        }
+
+        private void tiBank_ItemClick(object sender, TileItemEventArgs e)
+        {
+            Forms.frmBank frm = new Forms.frmBank();
+            frm.Show();
+        }
+
+        private void tiRekapWarkat_ItemClick(object sender, TileItemEventArgs e)
+        {
+            Forms.frmWarkat frm = new Forms.frmWarkat();
             frm.Show();
         }
     }

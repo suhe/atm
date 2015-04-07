@@ -32,6 +32,8 @@ namespace ATM.Forms.OfficeForm
             //if is Edit = TRUE binding Data
             if (isEdit == true)
             {
+                //disabled code
+                txtOfficeCode.Enabled = false;
                 Office model = new Office();
                 model.DataReader();
                 this.txtOfficeCode.Text = Office.OfficeCode;
@@ -56,9 +58,9 @@ namespace ATM.Forms.OfficeForm
             if (this.Validation())
             {
                 if (isEdit == false)
-                    this.InsertUser(); // call insert function 
+                    this.InsertOffice(); // call insert function 
                 else
-                    this.UpdateUser();
+                    this.UpdateOffice();
 
                 MessageBox.Show("Save Has been sucessfully !");
                 this.loadData(); // load data after insert
@@ -83,7 +85,7 @@ namespace ATM.Forms.OfficeForm
             if (OfficeCode && BankCode && OfficeName && Address && CityKey && ProvKey && satKerKey && kliringKey && contactPhone)
             {
                 Office model = new Office();
-                if (model.FindByCode(txtOfficeCode.Text)==true)
+                if (model.FindByCode(txtOfficeCode.Text)==true && isEdit==false)
                 {
                     MessageBox.Show("Office Code Has been Available Please Put Other Code !");
                     return false;
@@ -97,7 +99,7 @@ namespace ATM.Forms.OfficeForm
             }
         }
 
-        private void InsertUser()
+        private void InsertOffice()
         {
             Office model = new Office();
             Office.OfficeCode = txtOfficeCode.Text;
@@ -111,7 +113,7 @@ namespace ATM.Forms.OfficeForm
             model.Insert();
         }
 
-        private void UpdateUser()
+        private void UpdateOffice()
         {
             Office model = new Office();
             Office.OfficeCode = txtOfficeCode.Text;

@@ -172,8 +172,8 @@
   <data name="btnPrint.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAAlwSFlzAAEQiAAB
-        EIgB5DLKFwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAANJSURBVFhH7ZbLS1VR
+        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAAlwSFlzAAEQhwAB
+        EIcBkvxkDQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAANJSURBVFhH7ZbLS1VR
         FMYvmlRkFkQUQZMQNInr4/q4XjEhCHpQkKQ0CKJBf0DNw3HQIKISEQojaCoR6CACJ/bClJ4QWFAGEYgT
         yTLTft9mbdv3eK9Xjjrrg4999tp7rfWtffY5eyfyIZVKlcBrcBourIIvampqMhZ2ZcBhJ47DDQ0NC42N
         jauiYhDrR319/VkLXxh1dXVXmpqaXAU4PqP/MA7xH6CdlBDab7W1tXssxbIo0rLJifZRR0dHsdljgRin
@@ -304,7 +304,4 @@
         /wLwglb5LGy0jwAAAABJRU5ErkJggg==
 </value>
   </data>
-  <metadata name="xpPageSelector1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
 </root>

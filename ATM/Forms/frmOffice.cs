@@ -20,6 +20,7 @@ namespace ATM.Forms
         public static string bankName = "";
         public static string address = "";
 
+
         public frmOffice()
         {
             InitializeComponent();
@@ -35,12 +36,17 @@ namespace ATM.Forms
         private void loadData()
         {
             Office model = new Office();
-            gridControl1.DataSource = model.dataSource(officeCode,bankCode,officeName,bankName,address);
+            gridControl1.DataSource = model.dataSource(officeCode, bankCode, officeName, bankName, address);
         }
 
-        private void btnClose_Click(object sender, EventArgs e)
+        
+        private void btnAdd_Click(object sender, EventArgs e)
         {
-            this.Close();
+            frmForm.formName = "New Office";
+            frmForm frm = new frmForm();
+            frm.loadData += new frmForm.DoEvent(loadData);
+            frmForm.isEdit = false;
+            frm.ShowDialog();
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
@@ -53,8 +59,8 @@ namespace ATM.Forms
             {
                 if (id != null)
                 {
-                    User user = new User();
-                    bool Del = user.Delete(id);
+                    Office office = new Office();
+                    bool Del = office.Delete(id);
                     if (Del == true)
                     {
                         MessageBox.Show("Delete Has been sucessfully !");
@@ -68,26 +74,6 @@ namespace ATM.Forms
         {
             frmSearch frm = new frmSearch();
             frm.loadData += new frmSearch.DoEvent(loadData);
-            frm.ShowDialog();
-        }
-
-        private void btnReset_Click(object sender, EventArgs e)
-        {
-            officeCode = "";
-            officeName = "";
-            bankCode = "";
-            bankName = "";
-            address = "";
-            //load data
-            this.loadData();
-        }
-
-        private void btnAdd_Click(object sender, EventArgs e)
-        {
-            frmForm.formName = "New Office";
-            frmForm frm = new frmForm();
-            frm.loadData += new frmForm.DoEvent(loadData);
-            frmForm.isEdit = false;
             frm.ShowDialog();
         }
 
@@ -109,6 +95,23 @@ namespace ATM.Forms
             }
         }
 
+        private void btnReset_Click(object sender, EventArgs e)
+        {
+            officeCode = "";
+            officeName = "";
+            bankCode = "";
+            bankName = "";
+            address = "";
+            //load data
+            this.loadData();
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        
         
     }
 }

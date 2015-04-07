@@ -136,7 +136,19 @@ namespace ATM.Models
 
         }
 
-    }
+        public bool Delete(string ID)
+        {
+            SqlCommand cmd = new SqlCommand();
+            Connection conn = new Connection();
+            cmd.CommandText = "[dbo].[Sp_Delete_Office]";
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.Add(new SqlParameter("@ID", ID));
+            cmd.Connection = conn.OpenDB();
+            cmd.ExecuteNonQuery();
+            conn.CloseDB();
+            return true;
+        }
 
-        
+    }
+     
 }

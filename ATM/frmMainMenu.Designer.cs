@@ -37,14 +37,14 @@
             DevExpress.XtraEditors.TileItemElement tileItemElement6 = new DevExpress.XtraEditors.TileItemElement();
             this.tiControl = new DevExpress.XtraEditors.TileControl();
             this.tileGroup2 = new DevExpress.XtraEditors.TileGroup();
-            this.tileGroup3 = new DevExpress.XtraEditors.TileGroup();
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.tiSetting = new DevExpress.XtraEditors.TileItem();
             this.tiUser = new DevExpress.XtraEditors.TileItem();
             this.tiClose = new DevExpress.XtraEditors.TileItem();
+            this.tileGroup3 = new DevExpress.XtraEditors.TileGroup();
             this.tiRekapWarkat = new DevExpress.XtraEditors.TileItem();
             this.tiBank = new DevExpress.XtraEditors.TileItem();
             this.tiOffice = new DevExpress.XtraEditors.TileItem();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.SuspendLayout();
             // 
             // tiControl
@@ -72,14 +72,6 @@
             this.tileGroup2.Items.Add(this.tiClose);
             this.tileGroup2.Name = "tileGroup2";
             this.tileGroup2.Text = null;
-            // 
-            // tileGroup3
-            // 
-            this.tileGroup3.Items.Add(this.tiRekapWarkat);
-            this.tileGroup3.Items.Add(this.tiBank);
-            this.tileGroup3.Items.Add(this.tiOffice);
-            this.tileGroup3.Name = "tileGroup3";
-            this.tileGroup3.Text = null;
             // 
             // tiSetting
             // 
@@ -128,6 +120,14 @@
             this.tiClose.Name = "tiClose";
             this.tiClose.ItemClick += new DevExpress.XtraEditors.TileItemClickEventHandler(this.tiClose_ItemClick);
             // 
+            // tileGroup3
+            // 
+            this.tileGroup3.Items.Add(this.tiRekapWarkat);
+            this.tileGroup3.Items.Add(this.tiBank);
+            this.tileGroup3.Items.Add(this.tiOffice);
+            this.tileGroup3.Name = "tileGroup3";
+            this.tileGroup3.Text = null;
+            // 
             // tiRekapWarkat
             // 
             this.tiRekapWarkat.AppearanceItem.Normal.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -142,6 +142,7 @@
             this.tiRekapWarkat.Id = 3;
             this.tiRekapWarkat.IsLarge = true;
             this.tiRekapWarkat.Name = "tiRekapWarkat";
+            this.tiRekapWarkat.ItemClick += new DevExpress.XtraEditors.TileItemClickEventHandler(this.tiRekapWarkat_ItemClick);
             // 
             // tiBank
             // 
@@ -157,7 +158,7 @@
             this.tiBank.Id = 4;
             this.tiBank.IsLarge = true;
             this.tiBank.Name = "tiBank";
-      
+            this.tiBank.ItemClick += new DevExpress.XtraEditors.TileItemClickEventHandler(this.tiBank_ItemClick);
             // 
             // tiOffice
             // 

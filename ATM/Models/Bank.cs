@@ -58,6 +58,74 @@ namespace ATM.Models
             conn.CloseDB();
             return true;
         }
+
+        public bool FindByCode(string byCode)
+        {
+            SqlCommand cmd = new SqlCommand();
+            Connection conn = new Connection();
+            cmd.CommandText = "[dbo].[Sp_Single_By_Code_Bank]";
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.Add(new SqlParameter("@BankCode", byCode));
+            cmd.Connection = conn.OpenDB();
+            SqlDataReader DR = cmd.ExecuteReader();
+            //binding data
+            if (DR.Read())
+            {
+                conn.CloseDB();
+                return true;
+            }
+           
+            conn.CloseDB();
+            return false;
+        }
+
+        public bool Insert()
+        {
+            SqlCommand cmd = new SqlCommand();
+            Connection conn = new Connection();
+            cmd.CommandText = "[dbo].[Sp_Insert_Bank]";
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.Add(new SqlParameter("@BankCode", BankCode));
+            cmd.Parameters.Add(new SqlParameter("@BankName", BankName));
+            cmd.Parameters.Add(new SqlParameter("@BankInitial", BankInitial));
+            cmd.Parameters.Add(new SqlParameter("@TypeKey", TypeKey));
+            cmd.Parameters.Add(new SqlParameter("@Status", Status));
+            cmd.Connection = conn.OpenDB();
+            cmd.ExecuteNonQuery();
+            conn.CloseDB();
+            return true;
+
+        }
+
+        public bool Update()
+        {
+            SqlCommand cmd = new SqlCommand();
+            Connection conn = new Connection();
+            cmd.CommandText = "[dbo].[Sp_Update_Bank]";
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.Add(new SqlParameter("@BankID", BankID));
+            cmd.Parameters.Add(new SqlParameter("@BankName", BankName));
+            cmd.Parameters.Add(new SqlParameter("@BankInitial", BankInitial));
+            cmd.Parameters.Add(new SqlParameter("@TypeKey", TypeKey));
+            cmd.Parameters.Add(new SqlParameter("@Status", Status));
+            cmd.Connection = conn.OpenDB();
+            cmd.ExecuteNonQuery();
+            conn.CloseDB();
+            return true;
+        }
+
+        public bool Delete(string ID)
+        {
+            SqlCommand cmd = new SqlCommand();
+            Connection conn = new Connection();
+            cmd.CommandText = "[dbo].[Sp_Delete_Bank]";
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.Add(new SqlParameter("@ID", ID));
+            cmd.Connection = conn.OpenDB();
+            cmd.ExecuteNonQuery();
+            conn.CloseDB();
+            return true;
+        }
     }
 
         
