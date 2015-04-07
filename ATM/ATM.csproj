@@ -163,12 +163,25 @@
     <Compile Include="Forms\WarkatForm\frmForm.Designer.cs">
       <DependentUpon>frmForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\WarkatForm\frmModalAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\WarkatForm\frmModalAccount.Designer.cs">
+      <DependentUpon>frmModalAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\WarkatForm\frmModalBank.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\WarkatForm\frmModalBank.Designer.cs">
+      <DependentUpon>frmModalBank.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmMainMenu.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmMainMenu.Designer.cs">
       <DependentUpon>frmMainMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\Account.cs" />
     <Compile Include="Models\Bank.cs" />
     <Compile Include="Models\LoginForm.cs" />
     <Compile Include="Models\Office.cs" />
@@ -221,6 +234,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\WarkatForm\frmForm.resx">
       <DependentUpon>frmForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\WarkatForm\frmModalAccount.resx">
+      <DependentUpon>frmModalAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\WarkatForm\frmModalBank.resx">
+      <DependentUpon>frmModalBank.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMainMenu.resx">
       <DependentUpon>frmMainMenu.cs</DependentUpon>

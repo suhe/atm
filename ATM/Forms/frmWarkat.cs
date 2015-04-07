@@ -41,11 +41,10 @@ namespace ATM.Forms
         {
             frmForm.formName = "New Warkat";
             frmForm frm = new frmForm();
-            //frm.loadData += new frmForm.DoEvent(loadData);
-            //frmForm.isEdit = false;
+            frm.loadData += new frmForm.DoEvent(loadData);
+            frmForm.isEdit = false;
             frm.ShowDialog();
         }
 
-        
     }
 }

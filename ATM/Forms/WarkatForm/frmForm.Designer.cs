@@ -30,46 +30,46 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmForm));
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblFormName = new DevExpress.XtraEditors.LabelControl();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
-            this.btnSave = new DevExpress.XtraEditors.SimpleButton();
-            this.btnCancel = new DevExpress.XtraEditors.SimpleButton();
             this.panelControl3 = new DevExpress.XtraEditors.PanelControl();
+            this.labelControl9 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
+            this.txtDueDate = new DevExpress.XtraEditors.DateEdit();
             this.labelControl12 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl11 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl10 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
-            this.txtProvinceKey = new DevExpress.XtraEditors.TextEdit();
+            this.txtNominal = new DevExpress.XtraEditors.TextEdit();
             this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
-            this.txtCityKey = new DevExpress.XtraEditors.TextEdit();
+            this.txtAccountNo = new DevExpress.XtraEditors.TextEdit();
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
-            this.txtAddress = new DevExpress.XtraEditors.TextEdit();
+            this.txtBankCode = new DevExpress.XtraEditors.TextEdit();
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
-            this.txtBankCode = new DevExpress.XtraEditors.TextEdit();
+            this.txtWarkatNo = new DevExpress.XtraEditors.TextEdit();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.txtOfficeCode = new DevExpress.XtraEditors.TextEdit();
-            this.dateEdit1 = new DevExpress.XtraEditors.DateEdit();
-            this.btnFind = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
-            this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl9 = new DevExpress.XtraEditors.LabelControl();
+            this.txtTransactionCode = new DevExpress.XtraEditors.TextEdit();
+            this.btnFindAccountNo = new DevExpress.XtraEditors.SimpleButton();
+            this.btnFindBankCode = new DevExpress.XtraEditors.SimpleButton();
+            this.btnSave = new DevExpress.XtraEditors.SimpleButton();
+            this.btnCancel = new DevExpress.XtraEditors.SimpleButton();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
             this.panelControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).BeginInit();
             this.panelControl3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtProvinceKey.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtCityKey.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtAddress.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDueDate.Properties.VistaTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDueDate.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtNominal.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtAccountNo.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtBankCode.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtOfficeCode.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties.VistaTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtWarkatNo.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTransactionCode.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panelControl1
@@ -81,16 +81,6 @@
             this.panelControl1.Name = "panelControl1";
             this.panelControl1.Size = new System.Drawing.Size(539, 37);
             this.panelControl1.TabIndex = 6;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(10, 10);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(16, 16);
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
             // 
             // lblFormName
             // 
@@ -111,51 +101,64 @@
             this.panelControl2.Size = new System.Drawing.Size(539, 53);
             this.panelControl2.TabIndex = 7;
             // 
-            // btnSave
-            // 
-            this.btnSave.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.Image")));
-            this.btnSave.Location = new System.Drawing.Point(364, 18);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(69, 23);
-            this.btnSave.TabIndex = 2;
-            this.btnSave.Text = "&Save";
-            // 
-            // btnCancel
-            // 
-            this.btnCancel.Image = ((System.Drawing.Image)(resources.GetObject("btnCancel.Image")));
-            this.btnCancel.Location = new System.Drawing.Point(440, 17);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(74, 24);
-            this.btnCancel.TabIndex = 3;
-            this.btnCancel.Text = "&Cancel";
-            // 
             // panelControl3
             // 
             this.panelControl3.Controls.Add(this.labelControl9);
             this.panelControl3.Controls.Add(this.labelControl8);
-            this.panelControl3.Controls.Add(this.simpleButton1);
-            this.panelControl3.Controls.Add(this.btnFind);
-            this.panelControl3.Controls.Add(this.dateEdit1);
+            this.panelControl3.Controls.Add(this.btnFindAccountNo);
+            this.panelControl3.Controls.Add(this.btnFindBankCode);
+            this.panelControl3.Controls.Add(this.txtDueDate);
             this.panelControl3.Controls.Add(this.labelControl12);
             this.panelControl3.Controls.Add(this.labelControl11);
             this.panelControl3.Controls.Add(this.labelControl10);
             this.panelControl3.Controls.Add(this.labelControl2);
             this.panelControl3.Controls.Add(this.labelControl7);
-            this.panelControl3.Controls.Add(this.txtProvinceKey);
+            this.panelControl3.Controls.Add(this.txtNominal);
             this.panelControl3.Controls.Add(this.labelControl6);
-            this.panelControl3.Controls.Add(this.txtCityKey);
+            this.panelControl3.Controls.Add(this.txtAccountNo);
             this.panelControl3.Controls.Add(this.labelControl5);
-            this.panelControl3.Controls.Add(this.txtAddress);
+            this.panelControl3.Controls.Add(this.txtBankCode);
             this.panelControl3.Controls.Add(this.labelControl4);
             this.panelControl3.Controls.Add(this.labelControl3);
-            this.panelControl3.Controls.Add(this.txtBankCode);
+            this.panelControl3.Controls.Add(this.txtWarkatNo);
             this.panelControl3.Controls.Add(this.labelControl1);
-            this.panelControl3.Controls.Add(this.txtOfficeCode);
+            this.panelControl3.Controls.Add(this.txtTransactionCode);
             this.panelControl3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelControl3.Location = new System.Drawing.Point(0, 37);
             this.panelControl3.Name = "panelControl3";
             this.panelControl3.Size = new System.Drawing.Size(539, 172);
             this.panelControl3.TabIndex = 8;
+            // 
+            // labelControl9
+            // 
+            this.labelControl9.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.labelControl9.Location = new System.Drawing.Point(520, 147);
+            this.labelControl9.Name = "labelControl9";
+            this.labelControl9.Size = new System.Drawing.Size(7, 13);
+            this.labelControl9.TabIndex = 27;
+            this.labelControl9.Text = "*";
+            // 
+            // labelControl8
+            // 
+            this.labelControl8.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.labelControl8.Location = new System.Drawing.Point(520, 123);
+            this.labelControl8.Name = "labelControl8";
+            this.labelControl8.Size = new System.Drawing.Size(7, 13);
+            this.labelControl8.TabIndex = 26;
+            this.labelControl8.Text = "*";
+            // 
+            // txtDueDate
+            // 
+            this.txtDueDate.EditValue = null;
+            this.txtDueDate.Location = new System.Drawing.Point(112, 60);
+            this.txtDueDate.Name = "txtDueDate";
+            this.txtDueDate.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
+            this.txtDueDate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.txtDueDate.Properties.VistaTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton()});
+            this.txtDueDate.Size = new System.Drawing.Size(100, 20);
+            this.txtDueDate.TabIndex = 23;
             // 
             // labelControl12
             // 
@@ -201,13 +204,13 @@
             this.labelControl7.TabIndex = 11;
             this.labelControl7.Text = "Nominal";
             // 
-            // txtProvinceKey
+            // txtNominal
             // 
-            this.txtProvinceKey.Location = new System.Drawing.Point(111, 142);
-            this.txtProvinceKey.Name = "txtProvinceKey";
-            this.txtProvinceKey.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
-            this.txtProvinceKey.Size = new System.Drawing.Size(402, 20);
-            this.txtProvinceKey.TabIndex = 10;
+            this.txtNominal.Location = new System.Drawing.Point(111, 142);
+            this.txtNominal.Name = "txtNominal";
+            this.txtNominal.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
+            this.txtNominal.Size = new System.Drawing.Size(402, 20);
+            this.txtNominal.TabIndex = 10;
             // 
             // labelControl6
             // 
@@ -217,14 +220,14 @@
             this.labelControl6.TabIndex = 9;
             this.labelControl6.Text = "Account No";
             // 
-            // txtCityKey
+            // txtAccountNo
             // 
-            this.txtCityKey.Enabled = false;
-            this.txtCityKey.Location = new System.Drawing.Point(112, 116);
-            this.txtCityKey.Name = "txtCityKey";
-            this.txtCityKey.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
-            this.txtCityKey.Size = new System.Drawing.Size(368, 20);
-            this.txtCityKey.TabIndex = 8;
+            this.txtAccountNo.Enabled = false;
+            this.txtAccountNo.Location = new System.Drawing.Point(112, 116);
+            this.txtAccountNo.Name = "txtAccountNo";
+            this.txtAccountNo.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
+            this.txtAccountNo.Size = new System.Drawing.Size(368, 20);
+            this.txtAccountNo.TabIndex = 8;
             // 
             // labelControl5
             // 
@@ -234,14 +237,14 @@
             this.labelControl5.TabIndex = 7;
             this.labelControl5.Text = "Bank Code";
             // 
-            // txtAddress
+            // txtBankCode
             // 
-            this.txtAddress.Enabled = false;
-            this.txtAddress.Location = new System.Drawing.Point(112, 90);
-            this.txtAddress.Name = "txtAddress";
-            this.txtAddress.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
-            this.txtAddress.Size = new System.Drawing.Size(368, 20);
-            this.txtAddress.TabIndex = 6;
+            this.txtBankCode.Enabled = false;
+            this.txtBankCode.Location = new System.Drawing.Point(112, 90);
+            this.txtBankCode.Name = "txtBankCode";
+            this.txtBankCode.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
+            this.txtBankCode.Size = new System.Drawing.Size(368, 20);
+            this.txtBankCode.TabIndex = 6;
             // 
             // labelControl4
             // 
@@ -259,13 +262,13 @@
             this.labelControl3.TabIndex = 3;
             this.labelControl3.Text = "Warkat No";
             // 
-            // txtBankCode
+            // txtWarkatNo
             // 
-            this.txtBankCode.Location = new System.Drawing.Point(112, 34);
-            this.txtBankCode.Name = "txtBankCode";
-            this.txtBankCode.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
-            this.txtBankCode.Size = new System.Drawing.Size(401, 20);
-            this.txtBankCode.TabIndex = 2;
+            this.txtWarkatNo.Location = new System.Drawing.Point(112, 34);
+            this.txtWarkatNo.Name = "txtWarkatNo";
+            this.txtWarkatNo.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
+            this.txtWarkatNo.Size = new System.Drawing.Size(401, 20);
+            this.txtWarkatNo.TabIndex = 2;
             // 
             // labelControl1
             // 
@@ -275,60 +278,61 @@
             this.labelControl1.TabIndex = 1;
             this.labelControl1.Text = "Transaction Code";
             // 
-            // txtOfficeCode
+            // txtTransactionCode
             // 
-            this.txtOfficeCode.Location = new System.Drawing.Point(112, 6);
-            this.txtOfficeCode.Name = "txtOfficeCode";
-            this.txtOfficeCode.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
-            this.txtOfficeCode.Size = new System.Drawing.Size(402, 20);
-            this.txtOfficeCode.TabIndex = 0;
+            this.txtTransactionCode.Location = new System.Drawing.Point(112, 6);
+            this.txtTransactionCode.Name = "txtTransactionCode";
+            this.txtTransactionCode.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
+            this.txtTransactionCode.Size = new System.Drawing.Size(402, 20);
+            this.txtTransactionCode.TabIndex = 0;
             // 
-            // dateEdit1
+            // btnFindAccountNo
             // 
-            this.dateEdit1.EditValue = null;
-            this.dateEdit1.Location = new System.Drawing.Point(112, 60);
-            this.dateEdit1.Name = "dateEdit1";
-            this.dateEdit1.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
-            this.dateEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEdit1.Properties.VistaTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton()});
-            this.dateEdit1.Size = new System.Drawing.Size(100, 20);
-            this.dateEdit1.TabIndex = 23;
+            this.btnFindAccountNo.Image = ((System.Drawing.Image)(resources.GetObject("btnFindAccountNo.Image")));
+            this.btnFindAccountNo.Location = new System.Drawing.Point(485, 114);
+            this.btnFindAccountNo.Name = "btnFindAccountNo";
+            this.btnFindAccountNo.Size = new System.Drawing.Size(29, 23);
+            this.btnFindAccountNo.TabIndex = 25;
+            this.btnFindAccountNo.Click += new System.EventHandler(this.btnFindAccountNo_Click);
             // 
-            // btnFind
+            // btnFindBankCode
             // 
-            this.btnFind.Image = ((System.Drawing.Image)(resources.GetObject("btnFind.Image")));
-            this.btnFind.Location = new System.Drawing.Point(486, 88);
-            this.btnFind.Name = "btnFind";
-            this.btnFind.Size = new System.Drawing.Size(29, 23);
-            this.btnFind.TabIndex = 24;
+            this.btnFindBankCode.Image = ((System.Drawing.Image)(resources.GetObject("btnFindBankCode.Image")));
+            this.btnFindBankCode.Location = new System.Drawing.Point(486, 88);
+            this.btnFindBankCode.Name = "btnFindBankCode";
+            this.btnFindBankCode.Size = new System.Drawing.Size(29, 23);
+            this.btnFindBankCode.TabIndex = 24;
+            this.btnFindBankCode.Click += new System.EventHandler(this.btnFindBankCode_Click);
             // 
-            // simpleButton1
+            // btnSave
             // 
-            this.simpleButton1.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.Image")));
-            this.simpleButton1.Location = new System.Drawing.Point(485, 114);
-            this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(29, 23);
-            this.simpleButton1.TabIndex = 25;
+            this.btnSave.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.Image")));
+            this.btnSave.Location = new System.Drawing.Point(364, 18);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(69, 23);
+            this.btnSave.TabIndex = 2;
+            this.btnSave.Text = "&Save";
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
-            // labelControl8
+            // btnCancel
             // 
-            this.labelControl8.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.labelControl8.Location = new System.Drawing.Point(520, 123);
-            this.labelControl8.Name = "labelControl8";
-            this.labelControl8.Size = new System.Drawing.Size(7, 13);
-            this.labelControl8.TabIndex = 26;
-            this.labelControl8.Text = "*";
+            this.btnCancel.Image = ((System.Drawing.Image)(resources.GetObject("btnCancel.Image")));
+            this.btnCancel.Location = new System.Drawing.Point(440, 17);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(74, 24);
+            this.btnCancel.TabIndex = 3;
+            this.btnCancel.Text = "&Cancel";
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
-            // labelControl9
+            // pictureBox1
             // 
-            this.labelControl9.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.labelControl9.Location = new System.Drawing.Point(520, 147);
-            this.labelControl9.Name = "labelControl9";
-            this.labelControl9.Size = new System.Drawing.Size(7, 13);
-            this.labelControl9.TabIndex = 27;
-            this.labelControl9.Text = "*";
+            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Location = new System.Drawing.Point(10, 10);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(16, 16);
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
             // 
             // frmForm
             // 
@@ -343,19 +347,19 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
             this.panelControl1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
             this.panelControl2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).EndInit();
             this.panelControl3.ResumeLayout(false);
             this.panelControl3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtProvinceKey.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtCityKey.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtAddress.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDueDate.Properties.VistaTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDueDate.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtNominal.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtAccountNo.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtBankCode.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtOfficeCode.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties.VistaTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtWarkatNo.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTransactionCode.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -374,19 +378,19 @@
         private DevExpress.XtraEditors.LabelControl labelControl10;
         private DevExpress.XtraEditors.LabelControl labelControl2;
         private DevExpress.XtraEditors.LabelControl labelControl7;
-        private DevExpress.XtraEditors.TextEdit txtProvinceKey;
+        private DevExpress.XtraEditors.TextEdit txtNominal;
         private DevExpress.XtraEditors.LabelControl labelControl6;
-        private DevExpress.XtraEditors.TextEdit txtCityKey;
+        private DevExpress.XtraEditors.TextEdit txtAccountNo;
         private DevExpress.XtraEditors.LabelControl labelControl5;
-        private DevExpress.XtraEditors.TextEdit txtAddress;
+        private DevExpress.XtraEditors.TextEdit txtBankCode;
         private DevExpress.XtraEditors.LabelControl labelControl4;
         private DevExpress.XtraEditors.LabelControl labelControl3;
-        private DevExpress.XtraEditors.TextEdit txtBankCode;
+        private DevExpress.XtraEditors.TextEdit txtWarkatNo;
         private DevExpress.XtraEditors.LabelControl labelControl1;
-        private DevExpress.XtraEditors.TextEdit txtOfficeCode;
-        private DevExpress.XtraEditors.SimpleButton simpleButton1;
-        private DevExpress.XtraEditors.SimpleButton btnFind;
-        private DevExpress.XtraEditors.DateEdit dateEdit1;
+        private DevExpress.XtraEditors.TextEdit txtTransactionCode;
+        private DevExpress.XtraEditors.SimpleButton btnFindAccountNo;
+        private DevExpress.XtraEditors.SimpleButton btnFindBankCode;
+        private DevExpress.XtraEditors.DateEdit txtDueDate;
         private DevExpress.XtraEditors.LabelControl labelControl9;
         private DevExpress.XtraEditors.LabelControl labelControl8;
 

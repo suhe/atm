@@ -133,7 +133,6 @@ namespace ATM.Models
             cmd.ExecuteNonQuery();
             conn.CloseDB();
             return true;
-
         }
 
         public bool Delete(string ID)
