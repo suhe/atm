@@ -90,6 +90,7 @@ namespace ATM.Models
             Connection conn = new Connection();
             cmd.CommandText = "[dbo].[Sp_Update_Account]";
             cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.Add(new SqlParameter("@AccountID", AccountID));
             cmd.Parameters.Add(new SqlParameter("@AccountName", AccountName));
             cmd.Connection = conn.OpenDB();
             cmd.ExecuteNonQuery();

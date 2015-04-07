@@ -110,10 +110,7 @@ namespace ATM.Forms.BankForm
             model.Update();
         }
 
-        private void txtStatus_EditValueChanged(object sender, EventArgs e)
-        {
-
-        }
+        
 
         private void txtStatus_KeyPress(object sender, KeyPressEventArgs e)
         {

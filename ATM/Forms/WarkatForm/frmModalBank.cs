@@ -48,7 +48,7 @@ namespace ATM.Forms.WarkatForm
             frmForm.BankID = id;
             frmForm.BankCode = code;
             //for foregin key 
-            Office.BankID = id;
+            Warkat.BankID = id;
             this.loadBankData();
             this.Close();
         }
@@ -85,6 +85,8 @@ namespace ATM.Forms.WarkatForm
             bankName = "";
             this.loadData();
         }
+
+        
 
         
        

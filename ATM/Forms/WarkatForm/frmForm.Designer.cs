@@ -30,11 +30,16 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmForm));
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblFormName = new DevExpress.XtraEditors.LabelControl();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
+            this.btnSave = new DevExpress.XtraEditors.SimpleButton();
+            this.btnCancel = new DevExpress.XtraEditors.SimpleButton();
             this.panelControl3 = new DevExpress.XtraEditors.PanelControl();
             this.labelControl9 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
+            this.btnFindAccountNo = new DevExpress.XtraEditors.SimpleButton();
+            this.btnFindBankCode = new DevExpress.XtraEditors.SimpleButton();
             this.txtDueDate = new DevExpress.XtraEditors.DateEdit();
             this.labelControl12 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl11 = new DevExpress.XtraEditors.LabelControl();
@@ -51,13 +56,9 @@
             this.txtWarkatNo = new DevExpress.XtraEditors.TextEdit();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.txtTransactionCode = new DevExpress.XtraEditors.TextEdit();
-            this.btnFindAccountNo = new DevExpress.XtraEditors.SimpleButton();
-            this.btnFindBankCode = new DevExpress.XtraEditors.SimpleButton();
-            this.btnSave = new DevExpress.XtraEditors.SimpleButton();
-            this.btnCancel = new DevExpress.XtraEditors.SimpleButton();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
             this.panelControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).BeginInit();
@@ -69,7 +70,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtBankCode.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtWarkatNo.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTransactionCode.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panelControl1
@@ -81,6 +81,16 @@
             this.panelControl1.Name = "panelControl1";
             this.panelControl1.Size = new System.Drawing.Size(539, 37);
             this.panelControl1.TabIndex = 6;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Location = new System.Drawing.Point(10, 10);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(16, 16);
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
             // 
             // lblFormName
             // 
@@ -100,6 +110,26 @@
             this.panelControl2.Name = "panelControl2";
             this.panelControl2.Size = new System.Drawing.Size(539, 53);
             this.panelControl2.TabIndex = 7;
+            // 
+            // btnSave
+            // 
+            this.btnSave.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.Image")));
+            this.btnSave.Location = new System.Drawing.Point(364, 18);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(69, 23);
+            this.btnSave.TabIndex = 2;
+            this.btnSave.Text = "&Save";
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
+            // btnCancel
+            // 
+            this.btnCancel.Image = ((System.Drawing.Image)(resources.GetObject("btnCancel.Image")));
+            this.btnCancel.Location = new System.Drawing.Point(440, 17);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(74, 24);
+            this.btnCancel.TabIndex = 3;
+            this.btnCancel.Text = "&Cancel";
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // panelControl3
             // 
@@ -146,6 +176,24 @@
             this.labelControl8.Size = new System.Drawing.Size(7, 13);
             this.labelControl8.TabIndex = 26;
             this.labelControl8.Text = "*";
+            // 
+            // btnFindAccountNo
+            // 
+            this.btnFindAccountNo.Image = ((System.Drawing.Image)(resources.GetObject("btnFindAccountNo.Image")));
+            this.btnFindAccountNo.Location = new System.Drawing.Point(485, 114);
+            this.btnFindAccountNo.Name = "btnFindAccountNo";
+            this.btnFindAccountNo.Size = new System.Drawing.Size(29, 23);
+            this.btnFindAccountNo.TabIndex = 25;
+            this.btnFindAccountNo.Click += new System.EventHandler(this.btnFindAccountNo_Click);
+            // 
+            // btnFindBankCode
+            // 
+            this.btnFindBankCode.Image = ((System.Drawing.Image)(resources.GetObject("btnFindBankCode.Image")));
+            this.btnFindBankCode.Location = new System.Drawing.Point(486, 88);
+            this.btnFindBankCode.Name = "btnFindBankCode";
+            this.btnFindBankCode.Size = new System.Drawing.Size(29, 23);
+            this.btnFindBankCode.TabIndex = 24;
+            this.btnFindBankCode.Click += new System.EventHandler(this.btnFindBankCode_Click);
             // 
             // txtDueDate
             // 
@@ -211,6 +259,8 @@
             this.txtNominal.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.txtNominal.Size = new System.Drawing.Size(402, 20);
             this.txtNominal.TabIndex = 10;
+            this.txtNominal.EditValueChanged += new System.EventHandler(this.txtNominal_EditValueChanged);
+            this.txtNominal.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNominal_KeyPress);
             // 
             // labelControl6
             // 
@@ -286,54 +336,6 @@
             this.txtTransactionCode.Size = new System.Drawing.Size(402, 20);
             this.txtTransactionCode.TabIndex = 0;
             // 
-            // btnFindAccountNo
-            // 
-            this.btnFindAccountNo.Image = ((System.Drawing.Image)(resources.GetObject("btnFindAccountNo.Image")));
-            this.btnFindAccountNo.Location = new System.Drawing.Point(485, 114);
-            this.btnFindAccountNo.Name = "btnFindAccountNo";
-            this.btnFindAccountNo.Size = new System.Drawing.Size(29, 23);
-            this.btnFindAccountNo.TabIndex = 25;
-            this.btnFindAccountNo.Click += new System.EventHandler(this.btnFindAccountNo_Click);
-            // 
-            // btnFindBankCode
-            // 
-            this.btnFindBankCode.Image = ((System.Drawing.Image)(resources.GetObject("btnFindBankCode.Image")));
-            this.btnFindBankCode.Location = new System.Drawing.Point(486, 88);
-            this.btnFindBankCode.Name = "btnFindBankCode";
-            this.btnFindBankCode.Size = new System.Drawing.Size(29, 23);
-            this.btnFindBankCode.TabIndex = 24;
-            this.btnFindBankCode.Click += new System.EventHandler(this.btnFindBankCode_Click);
-            // 
-            // btnSave
-            // 
-            this.btnSave.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.Image")));
-            this.btnSave.Location = new System.Drawing.Point(364, 18);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(69, 23);
-            this.btnSave.TabIndex = 2;
-            this.btnSave.Text = "&Save";
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
-            // 
-            // btnCancel
-            // 
-            this.btnCancel.Image = ((System.Drawing.Image)(resources.GetObject("btnCancel.Image")));
-            this.btnCancel.Location = new System.Drawing.Point(440, 17);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(74, 24);
-            this.btnCancel.TabIndex = 3;
-            this.btnCancel.Text = "&Cancel";
-            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(10, 10);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(16, 16);
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
-            // 
             // frmForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -347,6 +349,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
             this.panelControl1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
             this.panelControl2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).EndInit();
@@ -359,7 +362,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtBankCode.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtWarkatNo.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTransactionCode.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

@@ -88,6 +88,7 @@
             this.btnDelete.Size = new System.Drawing.Size(74, 57);
             this.btnDelete.TabIndex = 8;
             this.btnDelete.Text = "Del";
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnPrint
             // 
@@ -108,6 +109,7 @@
             this.btnReset.Size = new System.Drawing.Size(74, 57);
             this.btnReset.TabIndex = 3;
             this.btnReset.Text = "Reset";
+            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
             // 
             // btnFind
             // 
@@ -118,6 +120,7 @@
             this.btnFind.Size = new System.Drawing.Size(74, 57);
             this.btnFind.TabIndex = 2;
             this.btnFind.Text = "Find";
+            this.btnFind.Click += new System.EventHandler(this.btnFind_Click);
             // 
             // btnEdit
             // 
@@ -128,6 +131,7 @@
             this.btnEdit.Size = new System.Drawing.Size(74, 57);
             this.btnEdit.TabIndex = 1;
             this.btnEdit.Text = "Edit";
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // btnAdd
             // 

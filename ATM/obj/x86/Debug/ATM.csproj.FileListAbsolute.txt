@@ -44,3 +44,5 @@ E:\xampp\htdocs\ATM\ATM\obj\x86\Debug\ATM.exe.licenses
 E:\xampp\htdocs\ATM\ATM\bin\Debug\ATM.exe
 E:\xampp\htdocs\ATM\ATM\bin\Debug\ATM.pdb
 E:\xampp\htdocs\ATM\ATM\obj\x86\Debug\ATM.Forms.WarkatForm.frmModalAccount.resources
+E:\xampp\htdocs\ATM\ATM\obj\x86\Debug\ATM.Forms.WarkatForm.frmSearch.resources
+E:\xampp\htdocs\ATM\ATM\obj\x86\Debug\ATM.Forms.WarkatForm.ModalAccount.frmForm.resources

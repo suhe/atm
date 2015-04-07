@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
 using ATM.Models;
+using DevExpress.XtraEditors;
 
 namespace ATM.Forms.WarkatForm
 {
@@ -72,13 +73,60 @@ namespace ATM.Forms.WarkatForm
             frmForm.AccountID = id;
             frmForm.AccountNo = no;
             //for foregin key 
-            Account.AccountID = id;
+            Warkat.AccountID = id;
             this.loadAccountData();
             this.Close();
         }
 
-        
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            ModalAccount.frmForm.formName = "New Account";
+            ModalAccount.frmForm frm = new ModalAccount.frmForm();
+            frm.loadData += new ModalAccount.frmForm.DoEvent(loadData);
+            ModalAccount.frmForm.isEdit = false;
+            frm.ShowDialog();
+        }
 
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+            int id = Int32.Parse(gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "AccountID").ToString());
+            if (id > 0)
+            {
+                ModalAccount.frmForm.isEdit = true;
+                Account.AccountID = id;
+                ModalAccount.frmForm.formName = "Edit Account";
+                ModalAccount.frmForm frm = new ModalAccount.frmForm();
+                frm.loadData += new ModalAccount.frmForm.DoEvent(loadData);
+                frm.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("No Data Have Been Binding for this form !");
+            }
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            string name = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "AccountNo").ToString();
+            string id = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "AccountID").ToString();
+
+            DialogResult delMsg = XtraMessageBox.Show("Are You sure want to Delete Account No : " + name, "Delete Account", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (delMsg == DialogResult.Yes)
+            {
+                if (id != null)
+                {
+                    Account account = new Account();
+                    bool Del = account.Delete(id);
+                    if (Del == true)
+                    {
+                        MessageBox.Show("Delete Has been sucessfully !");
+                        this.loadData();
+                    }
+                }
+            }
+        }
+
+        
        
         
     }

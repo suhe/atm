@@ -29,6 +29,21 @@ namespace ATM.Forms.WarkatForm
             // Remove the control box so the form will only display client area. 
             this.ControlBox = false;
             this.lblFormName.Text = formName;
+            this.txtWarkatNo.Focus();
+            //if is Edit = TRUE binding Data
+            if (isEdit == true)
+            {
+                //disabled code
+                txtTransactionCode.Enabled = false;
+                Warkat model = new Warkat();
+                model.DataReader();
+                this.txtTransactionCode.Text = Warkat.TransactionCode;
+                this.txtWarkatNo.Text = Warkat.WarkatNo;
+                this.txtDueDate.EditValue = Warkat.DueDate;
+                this.txtBankCode.Text = Warkat.BankCode;
+                this.txtAccountNo.Text = Warkat.AccountNo;
+                this.txtNominal.Text = Warkat.Nominal.ToString();
+            }
         }
 
         private void btnFindBankCode_Click(object sender, EventArgs e)
@@ -110,7 +125,7 @@ namespace ATM.Forms.WarkatForm
             Warkat.TransactionCode = txtTransactionCode.Text;
             Warkat.WarkatNo = txtWarkatNo.Text;
             Warkat.DueDate = txtDueDate.Text;
-            Warkat.Nominal = Double.Parse(txtNominal.Text);
+            Warkat.Nominal = double.Parse(txtNominal.Text);
             model.Insert();
         }
 
@@ -122,6 +137,27 @@ namespace ATM.Forms.WarkatForm
             Warkat.DueDate = txtDueDate.Text;
             Warkat.Nominal = Double.Parse(txtNominal.Text);
             model.Update();
+        }
+
+        private void txtNominal_EditValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtNominal_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != '.')
+            {
+                e.Handled = true;
+            }
+
+            // only allow one decimal point
+            if (e.KeyChar == '.' && Text.IndexOf('.') > -1)
+            {
+                e.Handled = true;
+            }
+
+            base.OnKeyPress(e);
         }
     }
 }

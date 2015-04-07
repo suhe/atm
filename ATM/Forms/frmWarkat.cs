@@ -1,13 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
 using System.Windows.Forms;
 using ATM.Models;
 using ATM.Forms.WarkatForm;
+using DevExpress.XtraEditors;
 
 namespace ATM.Forms
 {
@@ -43,6 +40,57 @@ namespace ATM.Forms
             frmForm frm = new frmForm();
             frm.loadData += new frmForm.DoEvent(loadData);
             frmForm.isEdit = false;
+            frm.ShowDialog();
+        }
+
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+            int id = Int32.Parse(gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "WarkatID").ToString());
+            if (id > 0)
+            {
+                frmForm.isEdit = true;
+                Warkat.WarkatID = id;
+                frmForm.formName = "Edit Warkat";
+                frmForm frm = new frmForm();
+                frm.loadData += new frmForm.DoEvent(loadData);
+                frm.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("No Data Have Been Binding for this form !");
+            }
+        }
+
+        private void btnReset_Click(object sender, EventArgs e)
+        {
+            this.loadData();
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            string name = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "TransactionCode").ToString();
+            string id = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "WarkatID").ToString();
+
+            DialogResult delMsg = XtraMessageBox.Show("Are You sure want to Delete Transaction Code : " + name, "Delete Warkat", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (delMsg == DialogResult.Yes)
+            {
+                if (id != null)
+                {
+                    Warkat Warkat = new Warkat();
+                    bool Del = Warkat.Delete(id);
+                    if (Del == true)
+                    {
+                        MessageBox.Show("Delete Has been sucessfully !");
+                        this.loadData();
+                    }
+                }
+            }
+        }
+
+        private void btnFind_Click(object sender, EventArgs e)
+        {
+            frmSearch frm = new frmSearch();
+            //frm.loadData += new frmSearch.DoEvent(loadData);
             frm.ShowDialog();
         }
 

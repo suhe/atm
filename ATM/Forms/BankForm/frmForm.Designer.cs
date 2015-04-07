@@ -185,7 +185,6 @@
             this.txtStatus.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.txtStatus.Size = new System.Drawing.Size(402, 20);
             this.txtStatus.TabIndex = 10;
-            this.txtStatus.EditValueChanged += new System.EventHandler(this.txtStatus_EditValueChanged);
             this.txtStatus.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtStatus_KeyPress);
             // 
             // labelControl6

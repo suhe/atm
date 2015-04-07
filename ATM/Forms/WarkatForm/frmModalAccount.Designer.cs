@@ -176,6 +176,7 @@
             this.btnDelete.Size = new System.Drawing.Size(45, 29);
             this.btnDelete.TabIndex = 26;
             this.btnDelete.Text = "&Del";
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnEdit
             // 
@@ -186,6 +187,7 @@
             this.btnEdit.Size = new System.Drawing.Size(45, 29);
             this.btnEdit.TabIndex = 25;
             this.btnEdit.Text = "&Edit";
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // btnAdd
             // 
@@ -196,6 +198,7 @@
             this.btnAdd.Size = new System.Drawing.Size(45, 29);
             this.btnAdd.TabIndex = 24;
             this.btnAdd.Text = "&Add";
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // panelControl4
             // 

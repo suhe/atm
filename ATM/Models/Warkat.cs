@@ -15,7 +15,9 @@ namespace ATM.Models
         public static string WarkatNo = "";
         public static string DueDate = "";
         public static int BankID=0;
+        public static string BankCode = "";
         public static int AccountID=0;
+        public static string AccountNo = "";
         public static Double Nominal=0;
 
         public DataTable dataSource()
@@ -31,6 +33,33 @@ namespace ATM.Models
             da.Fill(dt);
             conn.CloseDB();
             return dt;
+        }
+
+        public bool DataReader()
+        {
+            SqlCommand cmd = new SqlCommand();
+            Connection conn = new Connection();
+            cmd.CommandText = "[dbo].[Sp_Single_Warkat]";
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.Add(new SqlParameter("@WarkatID", WarkatID));
+            cmd.Connection = conn.OpenDB();
+            SqlDataReader DR = cmd.ExecuteReader();
+            //binding data
+            if (DR.Read())
+            {
+                WarkatID = int.Parse(DR.GetValue(0).ToString());
+                TransactionCode = DR.GetValue(1).ToString();
+                WarkatNo = DR.GetValue(2).ToString();
+                DueDate = DR.GetValue(3).ToString();
+                BankID = int.Parse( DR.GetValue(4).ToString());
+                BankCode = DR.GetValue(5).ToString();
+                AccountID = int.Parse(DR.GetValue(7).ToString());
+                AccountNo = DR.GetValue(8).ToString();
+                Nominal = double.Parse( DR.GetValue(10).ToString());
+            }
+            //FirstName = "Test";
+            conn.CloseDB();
+            return true;
         }
 
         public bool FindByCode(string byCode)
@@ -57,7 +86,7 @@ namespace ATM.Models
         {
             SqlCommand cmd = new SqlCommand();
             Connection conn = new Connection();
-            cmd.CommandText = "[dbo].[Sp_Insert_Office]";
+            cmd.CommandText = "[dbo].[Sp_Insert_Warkat]";
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.Add(new SqlParameter("@TransactionCode", TransactionCode));
             cmd.Parameters.Add(new SqlParameter("@WarkatNo", WarkatNo));
@@ -89,6 +118,19 @@ namespace ATM.Models
             conn.CloseDB();
             return true;
 
+        }
+
+        public bool Delete(string ID)
+        {
+            SqlCommand cmd = new SqlCommand();
+            Connection conn = new Connection();
+            cmd.CommandText = "[dbo].[Sp_Delete_Warkat]";
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.Add(new SqlParameter("@ID", ID));
+            cmd.Connection = conn.OpenDB();
+            cmd.ExecuteNonQuery();
+            conn.CloseDB();
+            return true;
         }
 
     }
