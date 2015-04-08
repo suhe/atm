@@ -51,3 +51,4 @@ D:\xampp\htdocs\ATM\ATM\obj\x86\Debug\ATM.Forms.WarkatForm.frmModalAccount.resou
 D:\xampp\htdocs\ATM\ATM\obj\x86\Debug\ATM.Forms.WarkatForm.frmModalBank.resources
 D:\xampp\htdocs\ATM\ATM\obj\x86\Debug\ATM.Forms.WarkatForm.frmSearch.resources
 D:\xampp\htdocs\ATM\ATM\obj\x86\Debug\ATM.Forms.WarkatForm.ModalAccount.frmForm.resources
+D:\xampp\htdocs\ATM\ATM\bin\Debug\ATM.exe.config
