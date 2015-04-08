@@ -52,3 +52,6 @@ D:\xampp\htdocs\ATM\ATM\obj\x86\Debug\ATM.Forms.WarkatForm.frmModalBank.resource
 D:\xampp\htdocs\ATM\ATM\obj\x86\Debug\ATM.Forms.WarkatForm.frmSearch.resources
 D:\xampp\htdocs\ATM\ATM\obj\x86\Debug\ATM.Forms.WarkatForm.ModalAccount.frmForm.resources
 D:\xampp\htdocs\ATM\ATM\bin\Debug\ATM.exe.config
+E:\xampp\htdocs\ATM\ATM\bin\Debug\ATM.exe.config
+E:\xampp\htdocs\ATM\ATM\obj\x86\Debug\ATM.csprojResolveAssemblyReference.cache
+E:\xampp\htdocs\ATM\ATM\obj\x86\Debug\ATM.Reports.frmCrystalReportViewer.resources

@@ -1,14 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
 using System.Windows.Forms;
 using ATM.Models;
 using DevExpress.XtraEditors;
 using ATM.Forms.OfficeForm;
+using CrystalDecisions.CrystalReports.Engine;
 
 namespace ATM.Forms
 {
@@ -111,7 +108,14 @@ namespace ATM.Forms
             this.Close();
         }
 
-        
+        private void btnPrint_Click(object sender, EventArgs e)
+        {
+            //set model 
+            Office Model = new Office();
+            Reports.frmCrystalReportViewer.ds = Model.dataSet(officeCode, bankCode, officeName, bankName, address);
+            Reports.frmCrystalReportViewer frm = new Reports.frmCrystalReportViewer();
+            frm.Show();
+        }
         
     }
 }

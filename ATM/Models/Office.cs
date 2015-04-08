@@ -42,6 +42,25 @@ namespace ATM.Models
             return dt;
         }
 
+        public DataSet dataSet(string officeCode = null, string bankCode = null, string officeName = null, string bankName = null, string address = null)
+        {
+            SqlCommand cmd = new SqlCommand();
+            Connection conn = new Connection();
+            cmd.CommandText = "[dbo].[Sp_Select_Office]";
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.Add(new SqlParameter("@OfficeCode", officeCode));
+            cmd.Parameters.Add(new SqlParameter("@BankCode", bankCode));
+            cmd.Parameters.Add(new SqlParameter("@OfficeName", officeName));
+            cmd.Parameters.Add(new SqlParameter("@BankName", bankName));
+            cmd.Parameters.Add(new SqlParameter("@Address", address));
+            cmd.Connection = conn.OpenDB();
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataSet ds = new DataSet();
+            da.Fill(ds);
+            conn.CloseDB();
+            return ds;
+        }
+
         public bool DataReader()
         {
             SqlCommand cmd = new SqlCommand();

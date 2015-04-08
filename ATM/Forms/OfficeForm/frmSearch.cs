@@ -21,11 +21,11 @@ namespace ATM.Forms.OfficeForm
             // Remove the control box so the form will only display client area. 
             this.ControlBox = false;
 
-            //this.txtOfficeCode.Text = frmOffice.officeCode;
-            //this.txtBankCode.Text = frmOffice.bankCode;
-            //this.txtBankName.Text = frmOffice.bankName;
-            //this.txtOfficeName.Text = frmOffice.officeName;
-            //this.txtAddress.Text = frmOffice.address;
+            this.txtOfficeCode.Text = frmOffice.officeCode;
+            this.txtBankCode.Text = frmOffice.bankCode;
+            this.txtBankName.Text = frmOffice.bankName;
+            this.txtOfficeName.Text = frmOffice.officeName;
+            this.txtAddress.Text = frmOffice.address;
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
@@ -35,11 +35,11 @@ namespace ATM.Forms.OfficeForm
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            //frmOffice.officeCode = this.txtOfficeCode.Text;
-            //frmOffice.bankCode = this.txtBankCode.Text;
-            //frmOffice.bankName = this.txtBankName.Text;
-            //frmOffice.officeName = this.txtOfficeName.Text;
-            //frmOffice.address = this.txtAddress.Text;
+            frmOffice.officeCode = this.txtOfficeCode.Text;
+            frmOffice.bankCode = this.txtBankCode.Text;
+            frmOffice.bankName = this.txtBankName.Text;
+            frmOffice.officeName = this.txtOfficeName.Text;
+            frmOffice.address = this.txtAddress.Text;
 
             this.loadData();
             this.Close();
