@@ -10,6 +10,12 @@ namespace ATM.Forms
 {
     public partial class frmWarkat : Form
     {
+        public static string transactionCode = "";
+        public static string warkatNo = "";
+        public static string dateFrom = "01/01/2015";
+        public static string dateTo = "12/31/2017";
+        public static string bankCode= "";
+        public static string accountNo = "";
         
         public frmWarkat()
         {
@@ -26,7 +32,7 @@ namespace ATM.Forms
         private void loadData()
         {
             Warkat model = new Warkat();
-            gridControl1.DataSource = model.dataSource();
+            gridControl1.DataSource = model.dataSource(transactionCode,warkatNo,dateFrom,dateTo,bankCode,accountNo);
         }
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -45,7 +51,7 @@ namespace ATM.Forms
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
-            int id = Int32.Parse(gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "WarkatID").ToString());
+            int id = Int32.Parse(gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "#").ToString());
             if (id > 0)
             {
                 frmForm.isEdit = true;
@@ -63,13 +69,19 @@ namespace ATM.Forms
 
         private void btnReset_Click(object sender, EventArgs e)
         {
+            transactionCode = "";
+            warkatNo = "";
+            dateFrom = "01/01/2015";
+            dateTo = "12/31/2017";
+            bankCode = "";
+            accountNo = "";
             this.loadData();
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
             string name = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "TransactionCode").ToString();
-            string id = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "WarkatID").ToString();
+            string id = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "#").ToString();
 
             DialogResult delMsg = XtraMessageBox.Show("Are You sure want to Delete Transaction Code : " + name, "Delete Warkat", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             if (delMsg == DialogResult.Yes)
@@ -90,7 +102,7 @@ namespace ATM.Forms
         private void btnFind_Click(object sender, EventArgs e)
         {
             frmSearch frm = new frmSearch();
-            //frm.loadData += new frmSearch.DoEvent(loadData);
+            frm.loadData += new frmSearch.DoEvent(loadData);
             frm.ShowDialog();
         }
 

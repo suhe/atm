@@ -36,18 +36,18 @@
             this.btnSearch = new DevExpress.XtraEditors.SimpleButton();
             this.btnCancel = new DevExpress.XtraEditors.SimpleButton();
             this.panelControl3 = new DevExpress.XtraEditors.PanelControl();
+            this.txtDueDateTo = new DevExpress.XtraEditors.DateEdit();
+            this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
+            this.txtDueDateFrom = new DevExpress.XtraEditors.DateEdit();
             this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
             this.txtAccountNo = new DevExpress.XtraEditors.TextEdit();
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
-            this.txtBankName = new DevExpress.XtraEditors.TextEdit();
+            this.txtBankCode = new DevExpress.XtraEditors.TextEdit();
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.txtWarkatNo = new DevExpress.XtraEditors.TextEdit();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.txtTransactionCode = new DevExpress.XtraEditors.TextEdit();
-            this.txtDueDateFrom = new DevExpress.XtraEditors.DateEdit();
-            this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
-            this.txtDueDateTo = new DevExpress.XtraEditors.DateEdit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -55,14 +55,14 @@
             this.panelControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).BeginInit();
             this.panelControl3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtAccountNo.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtBankName.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtWarkatNo.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtTransactionCode.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtDueDateFrom.Properties.VistaTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtDueDateFrom.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDueDateTo.Properties.VistaTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDueDateTo.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDueDateFrom.Properties.VistaTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDueDateFrom.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtAccountNo.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtBankCode.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtWarkatNo.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTransactionCode.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // panelControl1
@@ -112,6 +112,7 @@
             this.btnSearch.Size = new System.Drawing.Size(104, 43);
             this.btnSearch.TabIndex = 2;
             this.btnSearch.Text = "Search";
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // btnCancel
             // 
@@ -131,7 +132,7 @@
             this.panelControl3.Controls.Add(this.labelControl6);
             this.panelControl3.Controls.Add(this.txtAccountNo);
             this.panelControl3.Controls.Add(this.labelControl5);
-            this.panelControl3.Controls.Add(this.txtBankName);
+            this.panelControl3.Controls.Add(this.txtBankCode);
             this.panelControl3.Controls.Add(this.labelControl4);
             this.panelControl3.Controls.Add(this.labelControl3);
             this.panelControl3.Controls.Add(this.txtWarkatNo);
@@ -142,6 +143,50 @@
             this.panelControl3.Name = "panelControl3";
             this.panelControl3.Size = new System.Drawing.Size(540, 149);
             this.panelControl3.TabIndex = 7;
+            // 
+            // txtDueDateTo
+            // 
+            this.txtDueDateTo.EditValue = null;
+            this.txtDueDateTo.Location = new System.Drawing.Point(237, 58);
+            this.txtDueDateTo.Name = "txtDueDateTo";
+            this.txtDueDateTo.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
+            this.txtDueDateTo.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.txtDueDateTo.Properties.DisplayFormat.FormatString = "MM/dd/yyyy";
+            this.txtDueDateTo.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.txtDueDateTo.Properties.EditFormat.FormatString = "MM/dd/yyyy";
+            this.txtDueDateTo.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.txtDueDateTo.Properties.Mask.EditMask = "MM/dd/yyyy";
+            this.txtDueDateTo.Properties.VistaTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton()});
+            this.txtDueDateTo.Size = new System.Drawing.Size(100, 20);
+            this.txtDueDateTo.TabIndex = 26;
+            // 
+            // labelControl7
+            // 
+            this.labelControl7.Location = new System.Drawing.Point(221, 61);
+            this.labelControl7.Name = "labelControl7";
+            this.labelControl7.Size = new System.Drawing.Size(4, 13);
+            this.labelControl7.TabIndex = 25;
+            this.labelControl7.Text = "-";
+            // 
+            // txtDueDateFrom
+            // 
+            this.txtDueDateFrom.EditValue = null;
+            this.txtDueDateFrom.Location = new System.Drawing.Point(112, 58);
+            this.txtDueDateFrom.Name = "txtDueDateFrom";
+            this.txtDueDateFrom.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
+            this.txtDueDateFrom.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.txtDueDateFrom.Properties.DisplayFormat.FormatString = "MM/dd/yyyy";
+            this.txtDueDateFrom.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.txtDueDateFrom.Properties.EditFormat.FormatString = "MM/dd/yyyy";
+            this.txtDueDateFrom.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.txtDueDateFrom.Properties.Mask.EditMask = "MM/dd/yyyy";
+            this.txtDueDateFrom.Properties.VistaTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton()});
+            this.txtDueDateFrom.Size = new System.Drawing.Size(100, 20);
+            this.txtDueDateFrom.TabIndex = 24;
             // 
             // labelControl6
             // 
@@ -162,16 +207,16 @@
             // 
             this.labelControl5.Location = new System.Drawing.Point(12, 87);
             this.labelControl5.Name = "labelControl5";
-            this.labelControl5.Size = new System.Drawing.Size(53, 13);
+            this.labelControl5.Size = new System.Drawing.Size(51, 13);
             this.labelControl5.TabIndex = 7;
-            this.labelControl5.Text = "Bank Name";
+            this.labelControl5.Text = "Bank Code";
             // 
-            // txtBankName
+            // txtBankCode
             // 
-            this.txtBankName.Location = new System.Drawing.Point(112, 84);
-            this.txtBankName.Name = "txtBankName";
-            this.txtBankName.Size = new System.Drawing.Size(402, 20);
-            this.txtBankName.TabIndex = 6;
+            this.txtBankCode.Location = new System.Drawing.Point(112, 84);
+            this.txtBankCode.Name = "txtBankCode";
+            this.txtBankCode.Size = new System.Drawing.Size(402, 20);
+            this.txtBankCode.TabIndex = 6;
             // 
             // labelControl4
             // 
@@ -211,40 +256,6 @@
             this.txtTransactionCode.Size = new System.Drawing.Size(402, 20);
             this.txtTransactionCode.TabIndex = 0;
             // 
-            // txtDueDateFrom
-            // 
-            this.txtDueDateFrom.EditValue = null;
-            this.txtDueDateFrom.Location = new System.Drawing.Point(112, 58);
-            this.txtDueDateFrom.Name = "txtDueDateFrom";
-            this.txtDueDateFrom.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
-            this.txtDueDateFrom.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.txtDueDateFrom.Properties.VistaTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton()});
-            this.txtDueDateFrom.Size = new System.Drawing.Size(100, 20);
-            this.txtDueDateFrom.TabIndex = 24;
-            // 
-            // labelControl7
-            // 
-            this.labelControl7.Location = new System.Drawing.Point(221, 61);
-            this.labelControl7.Name = "labelControl7";
-            this.labelControl7.Size = new System.Drawing.Size(4, 13);
-            this.labelControl7.TabIndex = 25;
-            this.labelControl7.Text = "-";
-            // 
-            // txtDueDateTo
-            // 
-            this.txtDueDateTo.EditValue = null;
-            this.txtDueDateTo.Location = new System.Drawing.Point(237, 58);
-            this.txtDueDateTo.Name = "txtDueDateTo";
-            this.txtDueDateTo.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
-            this.txtDueDateTo.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.txtDueDateTo.Properties.VistaTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton()});
-            this.txtDueDateTo.Size = new System.Drawing.Size(100, 20);
-            this.txtDueDateTo.TabIndex = 26;
-            // 
             // frmSearch
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -264,14 +275,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).EndInit();
             this.panelControl3.ResumeLayout(false);
             this.panelControl3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtAccountNo.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtBankName.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtWarkatNo.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtTransactionCode.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtDueDateFrom.Properties.VistaTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtDueDateFrom.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDueDateTo.Properties.VistaTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDueDateTo.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDueDateFrom.Properties.VistaTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDueDateFrom.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtAccountNo.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtBankCode.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtWarkatNo.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTransactionCode.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -288,7 +299,7 @@
         private DevExpress.XtraEditors.LabelControl labelControl6;
         private DevExpress.XtraEditors.TextEdit txtAccountNo;
         private DevExpress.XtraEditors.LabelControl labelControl5;
-        private DevExpress.XtraEditors.TextEdit txtBankName;
+        private DevExpress.XtraEditors.TextEdit txtBankCode;
         private DevExpress.XtraEditors.LabelControl labelControl4;
         private DevExpress.XtraEditors.LabelControl labelControl3;
         private DevExpress.XtraEditors.TextEdit txtWarkatNo;

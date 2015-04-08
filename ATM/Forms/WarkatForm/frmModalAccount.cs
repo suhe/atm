@@ -41,6 +41,7 @@ namespace ATM.Forms.WarkatForm
         private void btnReset_Click(object sender, EventArgs e)
         {
             cmbType.Text = "Account No";
+            txtSearch.Text = "";
             accountNo = "";
             accountName = "";
             this.loadData();

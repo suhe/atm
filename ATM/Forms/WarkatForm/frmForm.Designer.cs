@@ -203,6 +203,11 @@
             this.txtDueDate.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.txtDueDate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.txtDueDate.Properties.DisplayFormat.FormatString = "MM/dd/yyyy";
+            this.txtDueDate.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.txtDueDate.Properties.EditFormat.FormatString = "MM/dd/yyyy";
+            this.txtDueDate.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.txtDueDate.Properties.Mask.EditMask = "MM/dd/yyyy";
             this.txtDueDate.Properties.VistaTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton()});
             this.txtDueDate.Size = new System.Drawing.Size(100, 20);
@@ -330,6 +335,7 @@
             // 
             // txtTransactionCode
             // 
+            this.txtTransactionCode.Enabled = false;
             this.txtTransactionCode.Location = new System.Drawing.Point(112, 6);
             this.txtTransactionCode.Name = "txtTransactionCode";
             this.txtTransactionCode.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;

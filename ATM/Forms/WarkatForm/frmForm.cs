@@ -31,11 +31,11 @@ namespace ATM.Forms.WarkatForm
             this.lblFormName.Text = formName;
             this.txtWarkatNo.Focus();
             //if is Edit = TRUE binding Data
+            Warkat model = new Warkat();
             if (isEdit == true)
             {
                 //disabled code
                 txtTransactionCode.Enabled = false;
-                Warkat model = new Warkat();
                 model.DataReader();
                 this.txtTransactionCode.Text = Warkat.TransactionCode;
                 this.txtWarkatNo.Text = Warkat.WarkatNo;
@@ -43,6 +43,11 @@ namespace ATM.Forms.WarkatForm
                 this.txtBankCode.Text = Warkat.BankCode;
                 this.txtAccountNo.Text = Warkat.AccountNo;
                 this.txtNominal.Text = Warkat.Nominal.ToString();
+            }
+            else
+            {
+                txtTransactionCode.Enabled = false; //set to false
+                txtTransactionCode.Text = model.AutoTransactionCode();
             }
         }
 
@@ -100,8 +105,8 @@ namespace ATM.Forms.WarkatForm
             bool WarkatNo = validate.isRequired(txtWarkatNo.Text, "* Warkat No : Required Do Not Empty");
             bool DueDate = validate.isRequired(txtDueDate.Text, "* Due Date : Required Do Not Empty");
             bool BankCode = validate.isRequired(txtBankCode.Text, "* Bank Code : Required Do Not Empty");
-            bool AccountNo = validate.isRequired(txtAccountNo.Text, "* City Key : Required Do Not Empty");
-            
+            bool AccountNo = validate.isRequired(txtAccountNo.Text, "* Account No : Required Do Not Empty");
+            bool Nominal = validate.isRequired(txtNominal.Text, "* Nominal : Required Do Not Empty");
             if (transactionNo && WarkatNo && DueDate && BankCode && AccountNo)
             {
                 Warkat model = new Warkat();

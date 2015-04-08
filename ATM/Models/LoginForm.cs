@@ -6,7 +6,7 @@ namespace ATM.Models
 {
     class LoginForm
     {
-        public static int UserId;
+        public static int UserId=0;
         public static string UserName = "";
         public static string Password = "";
 

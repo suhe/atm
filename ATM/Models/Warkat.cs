@@ -20,13 +20,30 @@ namespace ATM.Models
         public static string AccountNo = "";
         public static Double Nominal=0;
 
-        public DataTable dataSource()
+        public String AutoTransactionCode()
+        {
+            string autocode="";
+            //fill to Year + Month
+            autocode += System.DateTime.Now.ToString("yyyyMM");
+            //fill Auto to user id
+            autocode += LoginForm.UserId!=0 ? LoginForm.UserId : 0;
+            //fill Total Transaction
+            autocode += TransactionCodeDigit(this.CountAll() + 1);
+            return autocode;
+        }
+
+        public DataTable dataSource(string transactionCode="", string warkatNo="", string dateFrom = "", string dateTo = "", string bankCode="", string accountNo="")
         {
             SqlCommand cmd = new SqlCommand();
             Connection conn = new Connection();
             cmd.CommandText = "[dbo].[Sp_Select_Warkat]";
             cmd.CommandType = CommandType.StoredProcedure;
-            //cmd.Parameters.Add(new SqlParameter("@BankCode", bankCode));
+            cmd.Parameters.Add(new SqlParameter("@TransactionCode", transactionCode));
+            cmd.Parameters.Add(new SqlParameter("@WarkatNo", WarkatNo));
+            cmd.Parameters.Add(new SqlParameter("@DateFrom", dateFrom));
+            cmd.Parameters.Add(new SqlParameter("@DateTo", dateTo));
+            cmd.Parameters.Add(new SqlParameter("@BankCode", bankCode));
+            cmd.Parameters.Add(new SqlParameter("@AccountNo", accountNo));
             cmd.Connection = conn.OpenDB();
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();
@@ -131,6 +148,40 @@ namespace ATM.Models
             cmd.ExecuteNonQuery();
             conn.CloseDB();
             return true;
+        }
+
+        public int CountAll()
+        {
+            SqlCommand cmd = new SqlCommand();
+            Connection conn = new Connection();
+            cmd.CommandText = "[dbo].[Sp_Count_All_Warkat]";
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Connection = conn.OpenDB();
+            SqlDataReader DR = cmd.ExecuteReader();
+            //binding data
+            int Total = 0;
+            if (DR.Read())
+            {
+                Total+= int.Parse(DR.GetValue(0).ToString());
+            }
+            //FirstName = "Test";
+            conn.CloseDB();
+            return Total;
+        }
+
+        public string TransactionCodeDigit(int numeric)
+        {
+            string Digit="";
+            if (numeric < 10)
+                Digit += "000" + numeric;
+            else if (numeric < 100)
+                Digit += "00" + numeric;
+            else if (numeric < 1000)
+                Digit += "0" + numeric;
+            else
+                Digit += numeric;
+
+            return Digit;
         }
 
     }

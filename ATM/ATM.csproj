@@ -205,6 +205,7 @@
     <Compile Include="Vendor\Vileosoft\Database\Connection.cs" />
     <Compile Include="Vendor\Vileosoft\Forms\Validation.cs" />
     <Compile Include="Vendor\Vileosoft\Text\IniFile.cs" />
+    <Compile Include="Vendor\Vileosoft\Text\Numeric.cs" />
     <EmbeddedResource Include="Forms\BankForm\frmForm.resx">
       <DependentUpon>frmForm.cs</DependentUpon>
     </EmbeddedResource>
