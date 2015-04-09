@@ -184,5 +184,23 @@ namespace ATM.Models
             return Digit;
         }
 
+        public DataSet findByAccount(string dateFrom,string dateTo,int AccountFromID,int AccountToID)
+        {
+            SqlCommand cmd = new SqlCommand();
+            Connection conn = new Connection();
+            cmd.CommandText = "[dbo].[Sp_Select_By_Account_Warkat]";
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.Add(new SqlParameter("@DateFrom", dateFrom));
+            cmd.Parameters.Add(new SqlParameter("@DateTo", dateTo));
+            cmd.Parameters.Add(new SqlParameter("@AccountFromID", AccountFromID));
+            cmd.Parameters.Add(new SqlParameter("@AccountToID", AccountToID));
+            cmd.Connection = conn.OpenDB();
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataSet ds = new DataSet();
+            da.Fill(ds);
+            conn.CloseDB();
+            return ds;
+        }
+
     }
 }

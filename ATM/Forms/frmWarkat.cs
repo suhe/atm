@@ -106,5 +106,12 @@ namespace ATM.Forms
             frm.ShowDialog();
         }
 
+        private void btnPrint_Click(object sender, EventArgs e)
+        {
+            frmPrintOption frm = new frmPrintOption();
+            //frm.loadData += new frmSearch.DoEvent(loadData);
+            frm.ShowDialog();
+        }
+
     }
 }

@@ -99,6 +99,7 @@
             this.btnPrint.Size = new System.Drawing.Size(74, 57);
             this.btnPrint.TabIndex = 7;
             this.btnPrint.Text = "&Print";
+            this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
             // 
             // btnReset
             // 

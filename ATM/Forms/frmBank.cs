@@ -5,6 +5,8 @@ using System.Windows.Forms;
 using ATM.Models;
 using ATM.Forms.BankForm;
 using DevExpress.XtraEditors;
+using ATM.Vendor.Vileosoft.Database;
+using CrystalDecisions.CrystalReports.Engine;
 
 namespace ATM.Forms
 {
@@ -87,6 +89,21 @@ namespace ATM.Forms
         private void btnPrint_Click(object sender, EventArgs e)
         {
             //adding crystal report
+            //set model 
+            Bank Model = new Bank();
+            ReportDocument report = new ReportDocument();
+            string directory = AppDomain.CurrentDomain.BaseDirectory;
+            report.Load(directory + "/Reports/Bank/crList.rpt");
+            report.DataSourceConnections[0].SetConnection(Connection.server + "\\" + Connection.instance, Connection.database, Connection.uid, Connection.password);
+            report.SetDataSource(Model.dataSet(bankCode,bankName,bankInitial,typeKey));
+            report.SetParameterValue("@BankCode", bankCode);
+            report.SetParameterValue("@BankName", bankName);
+            report.SetParameterValue("@Initial", bankInitial);
+            report.SetParameterValue("@TypeKey", typeKey);
+            Reports.frmCrystalReportViewer.report = report;
+            Reports.frmCrystalReportViewer.ds = Model.dataSet(bankCode, bankName,bankInitial,typeKey);
+            Reports.frmCrystalReportViewer frm = new Reports.frmCrystalReportViewer();
+            frm.Show();
         }
 
         private void btnDelete_Click(object sender, EventArgs e)

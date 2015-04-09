@@ -6,6 +6,7 @@ using ATM.Models;
 using DevExpress.XtraEditors;
 using ATM.Forms.OfficeForm;
 using CrystalDecisions.CrystalReports.Engine;
+using ATM.Vendor.Vileosoft.Database;
 
 namespace ATM.Forms
 {
@@ -112,6 +113,17 @@ namespace ATM.Forms
         {
             //set model 
             Office Model = new Office();
+            ReportDocument report = new ReportDocument();
+            string directory = AppDomain.CurrentDomain.BaseDirectory;
+            report.Load(directory + "/Reports/Office/crList.rpt");
+            report.DataSourceConnections[0].SetConnection(Connection.server + "\\" + Connection.instance, Connection.database, Connection.uid, Connection.password); 
+            report.SetDataSource(Model.dataSet(officeCode, bankCode, officeName, bankName, address));
+            report.SetParameterValue("@OfficeCode", officeCode);
+            report.SetParameterValue("@BankCode", bankCode);
+            report.SetParameterValue("@OfficeName", officeName);
+            report.SetParameterValue("@BankName", bankName);
+            report.SetParameterValue("@Address", address);
+            Reports.frmCrystalReportViewer.report = report;
             Reports.frmCrystalReportViewer.ds = Model.dataSet(officeCode, bankCode, officeName, bankName, address);
             Reports.frmCrystalReportViewer frm = new Reports.frmCrystalReportViewer();
             frm.Show();

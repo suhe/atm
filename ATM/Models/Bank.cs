@@ -35,6 +35,24 @@ namespace ATM.Models
             return dt;
         }
 
+        public DataSet dataSet(string bankCode = null, string bankName = null, string bankInitial = null, string typeKey = null)
+        {
+            SqlCommand cmd = new SqlCommand();
+            Connection conn = new Connection();
+            cmd.CommandText = "[dbo].[Sp_Select_Bank]";
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.Add(new SqlParameter("@BankCode", bankCode));
+            cmd.Parameters.Add(new SqlParameter("@BankName", bankName));
+            cmd.Parameters.Add(new SqlParameter("@Initial", bankInitial));
+            cmd.Parameters.Add(new SqlParameter("@TypeKey", typeKey));
+            cmd.Connection = conn.OpenDB();
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataSet ds = new DataSet();
+            da.Fill(ds);
+            conn.CloseDB();
+            return ds;
+        }
+
         public bool DataReader()
         {
             SqlCommand cmd = new SqlCommand();

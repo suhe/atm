@@ -9,11 +9,11 @@ namespace ATM.Vendor.Vileosoft.Database
     class Connection
     {
         private SqlConnection connection; 
-        private string server;
-        private string instance;
-        private string database;
-        private string uid;
-        private string password;
+        public static string server;
+        public static string instance;
+        public static string database;
+        public static string uid;
+        public static string password;
 
         public SqlConnection OpenDB()
         {
