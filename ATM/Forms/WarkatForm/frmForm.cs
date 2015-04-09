@@ -107,7 +107,7 @@ namespace ATM.Forms.WarkatForm
             bool BankCode = validate.isRequired(txtBankCode.Text, "* Bank Code : Required Do Not Empty");
             bool AccountNo = validate.isRequired(txtAccountNo.Text, "* Account No : Required Do Not Empty");
             bool Nominal = validate.isRequired(txtNominal.Text, "* Nominal : Required Do Not Empty");
-            if (transactionNo && WarkatNo && DueDate && BankCode && AccountNo)
+            if (transactionNo && WarkatNo && DueDate && BankCode && AccountNo && Nominal)
             {
                 Warkat model = new Warkat();
                 if (model.FindByCode(txtTransactionCode.Text) == true && isEdit == false)

@@ -224,6 +224,12 @@
     <Compile Include="Forms\WarkatForm\ModalAccount\frmForm.Designer.cs">
       <DependentUpon>frmForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\WarkatForm\PrintOptionForm\frmModalAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\WarkatForm\PrintOptionForm\frmModalAccount.Designer.cs">
+      <DependentUpon>frmModalAccount.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmMainMenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -324,6 +330,9 @@
     <EmbeddedResource Include="Forms\WarkatForm\ModalAccount\frmForm.resx">
       <DependentUpon>frmForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\WarkatForm\PrintOptionForm\frmModalAccount.resx">
+      <DependentUpon>frmModalAccount.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmMainMenu.resx">
       <DependentUpon>frmMainMenu.cs</DependentUpon>
     </EmbeddedResource>
@@ -395,9 +404,7 @@
   <ItemGroup>
     <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Forms\WarkatForm\ModalPrintOption\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

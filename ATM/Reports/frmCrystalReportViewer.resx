@@ -117,4 +117,29 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAABAAEAEBAAAAAAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAQAQAAAAAAAAAAAAAAAAAAAAA
+        AAD///8B////Af///wE0NDT/NTU1/zQ0NP80NDT/NDQ0/zQ0NP80NDT/NDQ0/zQ0NP82Njb/MjIysf//
+        /wH///8B////Af///wEzMzMFNjY2/////wH///8B////Af///wH///8B////Af///wH///8BMTExLzU1
+        Nf////8B////Af///wH///8BAAAAAzY2Nv////8BMzMz5Tc3N/83Nzf/Nzc3/zIyMsH///8B////ATIy
+        MjM1NTX/////Af///wH///8BMTExjTMzM9E1NTX/////ATQ0NB00NDQjNDQ0IzQ0NCMwMDAV////Af//
+        /wEyMjIzMzMz/zExMc0xMTFTMDAwlTMzM/8zMzP9NTU1/////wEyMjLtOTk5/zk5Of85OTn/OTk5/zk5
+        Of8zMzNzMjIyMzMzM/8zMzP/NjY2/zQ0NP8zMzP/MzMz/TU1Nf////8B////Af///wH///8B////Af//
+        /wH///8B////ATIyMjMzMzP/MzMz/zMzM/8zMzP/MzMz/zMzM/8zMzP/MzMzuTMzM7kzMzO5MzMzuTMz
+        M7kzMzO5MzMzuTMzM7kzMzPHMzMz/zMzM/8zMzP/MzMz/zMzM/8zMzP/MzMz/zMzM/8zMzP/MzMz/zMz
+        M/8zMzP/MzMz/zMzM/8zMzP/NDQ0/zMzM8E0NDT/MzMz/zMzM/8zMzP/MzMz/zMzM/8zMzP/MzMz/zMz
+        M/8zMzP/MzMz/zMzM/8zMzP/MzMz/zIyMtX///8BMzMzcTMzM/8zMzOZMzMz/zMzM/8zMzP/MzMz/zMz
+        M/8zMzP/MzMz/zMzM/8zMzP/MzMz/zMzM/80NDT/MTExmzQ0NP81NTX/////ATQ0NJMzMzPXMzMz/zMz
+        M9UxMTHXMTEx1zExMdcxMTHXMTEx1zExMdcxMTHXMzMz3zMzM/8xMTHTNDQ0Wf///wH///8BAAAAAzY2
+        Nv////8B////Af///wH///8B////Af///wH///8B////ATExMS81NTX/////Af///wH///8B////ASQk
+        JAc2Njb/////Af///wH///8B////Af///wH///8B////Af///wEyMjIzNTU1/////wH///8B////Af//
+        /wEkJCQHNjY2/////wH///8B////Af///wH///8B////Af///wH///8BNDQ0LTU1Nf////8B////Af//
+        /wH///8B////ATc3N/80NDTJMTExtTExMbUxMTG1MTExtTExMbUxMTG1MTExtTExMe0xMTHp////Af//
+        /wH///8B////Af///wEzMzMFMzMz9TMzM/8zMzP/MzMz/zMzM/8zMzP/MzMz/zMzM/8zMzPL////Af//
+        /wH///8BAAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA
+        //8AAP//AAD//w==
+</value>
+  </data>
 </root>

@@ -68,8 +68,8 @@
             this.panelControl1.Location = new System.Drawing.Point(0, 0);
             this.panelControl1.Name = "panelControl1";
             this.panelControl1.Size = new System.Drawing.Size(529, 51);
-            this.panelControl1.TabIndex = 1;
-            // 
+            this.panelControl1.TabIndex = 1; 
+           // 
             // pictureBox1
             // 
             this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));

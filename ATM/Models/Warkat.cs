@@ -32,7 +32,7 @@ namespace ATM.Models
             return autocode;
         }
 
-        public DataTable dataSource(string transactionCode="", string warkatNo="", string dateFrom = "", string dateTo = "", string bankCode="", string accountNo="")
+        public DataTable dataSource(string transactionCode = "", string WarkatNo = "", string dateFrom = "", string dateTo = "", string bankCode = "", string accountNo = "")
         {
             SqlCommand cmd = new SqlCommand();
             Connection conn = new Connection();

@@ -55,7 +55,7 @@ namespace ATM.Forms.WarkatForm
                     accountNo = txtSearch.Text;
                     accountName = "";
                     break;
-                case "Bank Name":
+                case "Account Name":
                     accountNo = "";
                     accountName = txtSearch.Text;
                     break;
@@ -127,7 +127,6 @@ namespace ATM.Forms.WarkatForm
             }
         }
 
-        
        
         
     }
