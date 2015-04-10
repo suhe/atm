@@ -152,3 +152,4 @@ E:\xampp\htdocs\ATM\ATM\bin\Debug\ru\DevExpress.XtraLayout.v12.2.resources.dll
 E:\xampp\htdocs\ATM\ATM\obj\x86\Debug\ATM.Forms.WarkatForm.frmPrintOption.resources
 E:\xampp\htdocs\ATM\ATM\obj\x86\Debug\ATM.Forms.WarkatForm.PrintOptionForm.frmModalAccount.resources
 D:\xampp\htdocs\ATM\ATM\obj\x86\Debug\ATM.Forms.WarkatForm.PrintOptionForm.frmModalAccount.resources
+D:\xampp\htdocs\ATM\ATM\obj\x86\Debug\ATM.csprojResolveAssemblyReference.cache
