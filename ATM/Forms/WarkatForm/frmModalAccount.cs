@@ -23,6 +23,7 @@ namespace ATM.Forms.WarkatForm
             this.StartPosition = FormStartPosition.CenterScreen;
             // Remove the control box so the form will only display client area. 
             this.ControlBox = false;
+            this.txtSearch.Select();
             //load data
             this.loadData();
         }

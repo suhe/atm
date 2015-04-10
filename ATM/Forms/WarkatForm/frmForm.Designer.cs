@@ -117,7 +117,7 @@
             this.btnSave.Location = new System.Drawing.Point(364, 18);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(69, 23);
-            this.btnSave.TabIndex = 2;
+            this.btnSave.TabIndex = 9;
             this.btnSave.Text = "&Save";
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
@@ -127,7 +127,7 @@
             this.btnCancel.Location = new System.Drawing.Point(440, 17);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(74, 24);
-            this.btnCancel.TabIndex = 3;
+            this.btnCancel.TabIndex = 10;
             this.btnCancel.Text = "&Cancel";
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
@@ -183,7 +183,7 @@
             this.btnFindAccountNo.Location = new System.Drawing.Point(485, 114);
             this.btnFindAccountNo.Name = "btnFindAccountNo";
             this.btnFindAccountNo.Size = new System.Drawing.Size(29, 23);
-            this.btnFindAccountNo.TabIndex = 25;
+            this.btnFindAccountNo.TabIndex = 7;
             this.btnFindAccountNo.Click += new System.EventHandler(this.btnFindAccountNo_Click);
             // 
             // btnFindBankCode
@@ -192,7 +192,7 @@
             this.btnFindBankCode.Location = new System.Drawing.Point(486, 88);
             this.btnFindBankCode.Name = "btnFindBankCode";
             this.btnFindBankCode.Size = new System.Drawing.Size(29, 23);
-            this.btnFindBankCode.TabIndex = 24;
+            this.btnFindBankCode.TabIndex = 5;
             this.btnFindBankCode.Click += new System.EventHandler(this.btnFindBankCode_Click);
             // 
             // txtDueDate
@@ -211,7 +211,8 @@
             this.txtDueDate.Properties.VistaTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton()});
             this.txtDueDate.Size = new System.Drawing.Size(100, 20);
-            this.txtDueDate.TabIndex = 23;
+            this.txtDueDate.TabIndex = 3;
+            this.txtDueDate.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtDueDate_KeyDown);
             // 
             // labelControl12
             // 
@@ -263,8 +264,9 @@
             this.txtNominal.Name = "txtNominal";
             this.txtNominal.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.txtNominal.Size = new System.Drawing.Size(402, 20);
-            this.txtNominal.TabIndex = 10;
+            this.txtNominal.TabIndex = 8;
             this.txtNominal.EditValueChanged += new System.EventHandler(this.txtNominal_EditValueChanged);
+            this.txtNominal.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtNominal_KeyDown);
             this.txtNominal.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNominal_KeyPress);
             // 
             // labelControl6
@@ -282,7 +284,8 @@
             this.txtAccountNo.Name = "txtAccountNo";
             this.txtAccountNo.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.txtAccountNo.Size = new System.Drawing.Size(368, 20);
-            this.txtAccountNo.TabIndex = 8;
+            this.txtAccountNo.TabIndex = 6;
+            this.txtAccountNo.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtAccountNo_KeyDown);
             // 
             // labelControl5
             // 
@@ -299,7 +302,8 @@
             this.txtBankCode.Name = "txtBankCode";
             this.txtBankCode.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.txtBankCode.Size = new System.Drawing.Size(368, 20);
-            this.txtBankCode.TabIndex = 6;
+            this.txtBankCode.TabIndex = 4;
+            this.txtBankCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtBankCode_KeyDown);
             // 
             // labelControl4
             // 
@@ -323,7 +327,8 @@
             this.txtWarkatNo.Name = "txtWarkatNo";
             this.txtWarkatNo.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.txtWarkatNo.Size = new System.Drawing.Size(401, 20);
-            this.txtWarkatNo.TabIndex = 2;
+            this.txtWarkatNo.TabIndex = 1;
+            this.txtWarkatNo.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtWarkatNo_KeyDown);
             // 
             // labelControl1
             // 
@@ -341,6 +346,7 @@
             this.txtTransactionCode.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.txtTransactionCode.Size = new System.Drawing.Size(402, 20);
             this.txtTransactionCode.TabIndex = 0;
+            this.txtTransactionCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtTransactionCode_KeyDown);
             // 
             // frmForm
             // 

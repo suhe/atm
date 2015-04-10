@@ -30,11 +30,16 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPrintOption));
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
+            this.btnClose = new DevExpress.XtraEditors.SimpleButton();
+            this.btnPreview = new DevExpress.XtraEditors.SimpleButton();
             this.panelControl3 = new DevExpress.XtraEditors.PanelControl();
+            this.btnFindAccountToID = new DevExpress.XtraEditors.SimpleButton();
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
             this.txtToAccountID = new DevExpress.XtraEditors.TextEdit();
+            this.btnFindAccountFromID = new DevExpress.XtraEditors.SimpleButton();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.txtFromAccountID = new DevExpress.XtraEditors.TextEdit();
             this.chAllAccount = new DevExpress.XtraEditors.CheckEdit();
@@ -43,13 +48,9 @@
             this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
             this.txtDueDateFrom = new DevExpress.XtraEditors.DateEdit();
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
-            this.btnFindAccountToID = new DevExpress.XtraEditors.SimpleButton();
-            this.btnFindAccountFromID = new DevExpress.XtraEditors.SimpleButton();
-            this.btnClose = new DevExpress.XtraEditors.SimpleButton();
-            this.btnPreview = new DevExpress.XtraEditors.SimpleButton();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
             this.panelControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).BeginInit();
@@ -61,7 +62,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtDueDateTo.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDueDateFrom.Properties.VistaTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDueDateFrom.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panelControl1
@@ -73,6 +73,16 @@
             this.panelControl1.Name = "panelControl1";
             this.panelControl1.Size = new System.Drawing.Size(421, 37);
             this.panelControl1.TabIndex = 6;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Location = new System.Drawing.Point(8, 10);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(16, 16);
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
             // 
             // labelControl2
             // 
@@ -92,6 +102,26 @@
             this.panelControl2.Name = "panelControl2";
             this.panelControl2.Size = new System.Drawing.Size(421, 44);
             this.panelControl2.TabIndex = 7;
+            // 
+            // btnClose
+            // 
+            this.btnClose.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.Image")));
+            this.btnClose.Location = new System.Drawing.Point(303, 6);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(104, 30);
+            this.btnClose.TabIndex = 8;
+            this.btnClose.Text = "&Close";
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
+            // btnPreview
+            // 
+            this.btnPreview.Image = ((System.Drawing.Image)(resources.GetObject("btnPreview.Image")));
+            this.btnPreview.Location = new System.Drawing.Point(193, 6);
+            this.btnPreview.Name = "btnPreview";
+            this.btnPreview.Size = new System.Drawing.Size(104, 30);
+            this.btnPreview.TabIndex = 7;
+            this.btnPreview.Text = "&Print Preview";
+            this.btnPreview.Click += new System.EventHandler(this.btnPreview_Click);
             // 
             // panelControl3
             // 
@@ -113,6 +143,16 @@
             this.panelControl3.Size = new System.Drawing.Size(421, 158);
             this.panelControl3.TabIndex = 8;
             // 
+            // btnFindAccountToID
+            // 
+            this.btnFindAccountToID.Enabled = false;
+            this.btnFindAccountToID.Image = ((System.Drawing.Image)(resources.GetObject("btnFindAccountToID.Image")));
+            this.btnFindAccountToID.Location = new System.Drawing.Point(378, 105);
+            this.btnFindAccountToID.Name = "btnFindAccountToID";
+            this.btnFindAccountToID.Size = new System.Drawing.Size(29, 23);
+            this.btnFindAccountToID.TabIndex = 6;
+            this.btnFindAccountToID.Click += new System.EventHandler(this.btnFindAccountToID_Click);
+            // 
             // labelControl5
             // 
             this.labelControl5.Location = new System.Drawing.Point(86, 109);
@@ -128,7 +168,17 @@
             this.txtToAccountID.Name = "txtToAccountID";
             this.txtToAccountID.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.txtToAccountID.Size = new System.Drawing.Size(210, 20);
-            this.txtToAccountID.TabIndex = 35;
+            this.txtToAccountID.TabIndex = 5;
+            // 
+            // btnFindAccountFromID
+            // 
+            this.btnFindAccountFromID.Enabled = false;
+            this.btnFindAccountFromID.Image = ((System.Drawing.Image)(resources.GetObject("btnFindAccountFromID.Image")));
+            this.btnFindAccountFromID.Location = new System.Drawing.Point(378, 77);
+            this.btnFindAccountFromID.Name = "btnFindAccountFromID";
+            this.btnFindAccountFromID.Size = new System.Drawing.Size(29, 23);
+            this.btnFindAccountFromID.TabIndex = 4;
+            this.btnFindAccountFromID.Click += new System.EventHandler(this.btnFindAccountFromID_Click);
             // 
             // labelControl3
             // 
@@ -145,7 +195,8 @@
             this.txtFromAccountID.Name = "txtFromAccountID";
             this.txtFromAccountID.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.txtFromAccountID.Size = new System.Drawing.Size(210, 20);
-            this.txtFromAccountID.TabIndex = 32;
+            this.txtFromAccountID.TabIndex = 3;
+            this.txtFromAccountID.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtFromAccountID_KeyDown);
             // 
             // chAllAccount
             // 
@@ -154,7 +205,7 @@
             this.chAllAccount.Name = "chAllAccount";
             this.chAllAccount.Properties.Caption = "All Account";
             this.chAllAccount.Size = new System.Drawing.Size(75, 19);
-            this.chAllAccount.TabIndex = 31;
+            this.chAllAccount.TabIndex = 2;
             this.chAllAccount.CheckedChanged += new System.EventHandler(this.chAllAccount_CheckedChanged);
             // 
             // labelControl1
@@ -181,7 +232,8 @@
             this.txtDueDateTo.Properties.VistaTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton()});
             this.txtDueDateTo.Size = new System.Drawing.Size(100, 20);
-            this.txtDueDateTo.TabIndex = 29;
+            this.txtDueDateTo.TabIndex = 1;
+            this.txtDueDateTo.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtDueDateTo_KeyDown);
             // 
             // labelControl7
             // 
@@ -207,7 +259,8 @@
             this.txtDueDateFrom.Properties.VistaTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton()});
             this.txtDueDateFrom.Size = new System.Drawing.Size(100, 20);
-            this.txtDueDateFrom.TabIndex = 27;
+            this.txtDueDateFrom.TabIndex = 0;
+            this.txtDueDateFrom.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtDueDateFrom_KeyDown);
             // 
             // labelControl4
             // 
@@ -216,56 +269,6 @@
             this.labelControl4.Size = new System.Drawing.Size(45, 13);
             this.labelControl4.TabIndex = 6;
             this.labelControl4.Text = "Due Date";
-            // 
-            // btnFindAccountToID
-            // 
-            this.btnFindAccountToID.Enabled = false;
-            this.btnFindAccountToID.Image = ((System.Drawing.Image)(resources.GetObject("btnFindAccountToID.Image")));
-            this.btnFindAccountToID.Location = new System.Drawing.Point(378, 105);
-            this.btnFindAccountToID.Name = "btnFindAccountToID";
-            this.btnFindAccountToID.Size = new System.Drawing.Size(29, 23);
-            this.btnFindAccountToID.TabIndex = 37;
-            this.btnFindAccountToID.Click += new System.EventHandler(this.btnFindAccountToID_Click);
-            // 
-            // btnFindAccountFromID
-            // 
-            this.btnFindAccountFromID.Enabled = false;
-            this.btnFindAccountFromID.Image = ((System.Drawing.Image)(resources.GetObject("btnFindAccountFromID.Image")));
-            this.btnFindAccountFromID.Location = new System.Drawing.Point(378, 77);
-            this.btnFindAccountFromID.Name = "btnFindAccountFromID";
-            this.btnFindAccountFromID.Size = new System.Drawing.Size(29, 23);
-            this.btnFindAccountFromID.TabIndex = 34;
-            this.btnFindAccountFromID.Click += new System.EventHandler(this.btnFindAccountFromID_Click);
-            // 
-            // btnClose
-            // 
-            this.btnClose.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.Image")));
-            this.btnClose.Location = new System.Drawing.Point(303, 6);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(104, 30);
-            this.btnClose.TabIndex = 4;
-            this.btnClose.Text = "&Close";
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
-            // 
-            // btnPreview
-            // 
-            this.btnPreview.Image = ((System.Drawing.Image)(resources.GetObject("btnPreview.Image")));
-            this.btnPreview.Location = new System.Drawing.Point(193, 6);
-            this.btnPreview.Name = "btnPreview";
-            this.btnPreview.Size = new System.Drawing.Size(104, 30);
-            this.btnPreview.TabIndex = 3;
-            this.btnPreview.Text = "&Print Preview";
-            this.btnPreview.Click += new System.EventHandler(this.btnPreview_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(8, 10);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(16, 16);
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
             // 
             // frmPrintOption
             // 
@@ -283,6 +286,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
             this.panelControl1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
             this.panelControl2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).EndInit();
@@ -295,7 +299,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtDueDateTo.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDueDateFrom.Properties.VistaTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDueDateFrom.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

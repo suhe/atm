@@ -29,13 +29,12 @@ namespace ATM.Forms.WarkatForm
             // Remove the control box so the form will only display client area. 
             this.ControlBox = false;
             this.lblFormName.Text = formName;
-            this.txtWarkatNo.Focus();
             //if is Edit = TRUE binding Data
             Warkat model = new Warkat();
             if (isEdit == true)
             {
                 //disabled code
-                txtTransactionCode.Enabled = false;
+                this.txtTransactionCode.Enabled = false;
                 model.DataReader();
                 this.txtTransactionCode.Text = Warkat.TransactionCode;
                 this.txtWarkatNo.Text = Warkat.WarkatNo;
@@ -49,6 +48,7 @@ namespace ATM.Forms.WarkatForm
                 txtTransactionCode.Enabled = false; //set to false
                 txtTransactionCode.Text = model.AutoTransactionCode();
             }
+            this.txtWarkatNo.Select();
         }
 
         private void btnFindBankCode_Click(object sender, EventArgs e)
@@ -163,6 +163,54 @@ namespace ATM.Forms.WarkatForm
             }
 
             base.OnKeyPress(e);
+        }
+
+        private void txtTransactionCode_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                txtWarkatNo.Focus();
+            }
+        }
+
+        private void txtWarkatNo_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                txtDueDate.Focus();
+            }
+        }
+
+        private void txtDueDate_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                txtBankCode.Focus();
+            }
+        }
+
+        private void txtBankCode_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                txtAccountNo.Focus();
+            }
+        }
+
+        private void txtAccountNo_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                txtNominal.Focus();
+            }
+        }
+
+        private void txtNominal_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btnSave.Focus();
+            }
         }
     }
 }

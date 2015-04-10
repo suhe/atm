@@ -65,7 +65,7 @@
             this.btnClose.Location = new System.Drawing.Point(2, 344);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(74, 57);
-            this.btnClose.TabIndex = 9;
+            this.btnClose.TabIndex = 6;
             this.btnClose.Text = "Close";
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
@@ -111,7 +111,7 @@
             this.btnPrint.Location = new System.Drawing.Point(2, 230);
             this.btnPrint.Name = "btnPrint";
             this.btnPrint.Size = new System.Drawing.Size(74, 57);
-            this.btnPrint.TabIndex = 7;
+            this.btnPrint.TabIndex = 4;
             this.btnPrint.Text = "&Print";
             this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
             // 
@@ -152,7 +152,7 @@
             this.btnDelete.Location = new System.Drawing.Point(2, 287);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(74, 57);
-            this.btnDelete.TabIndex = 8;
+            this.btnDelete.TabIndex = 5;
             this.btnDelete.Text = "Del";
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 

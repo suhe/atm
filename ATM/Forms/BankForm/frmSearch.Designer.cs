@@ -70,7 +70,8 @@
             this.txtTypeKey.Location = new System.Drawing.Point(112, 86);
             this.txtTypeKey.Name = "txtTypeKey";
             this.txtTypeKey.Size = new System.Drawing.Size(402, 20);
-            this.txtTypeKey.TabIndex = 6;
+            this.txtTypeKey.TabIndex = 3;
+            this.txtTypeKey.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtTypeKey_KeyDown);
             // 
             // labelControl4
             // 
@@ -85,7 +86,8 @@
             this.txtInitial.Location = new System.Drawing.Point(111, 32);
             this.txtInitial.Name = "txtInitial";
             this.txtInitial.Size = new System.Drawing.Size(402, 20);
-            this.txtInitial.TabIndex = 4;
+            this.txtInitial.TabIndex = 1;
+            this.txtInitial.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtInitial_KeyDown);
             // 
             // txtCode
             // 
@@ -93,6 +95,7 @@
             this.txtCode.Name = "txtCode";
             this.txtCode.Size = new System.Drawing.Size(402, 20);
             this.txtCode.TabIndex = 0;
+            this.txtCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtCode_KeyDown);
             // 
             // panelControl3
             // 
@@ -123,7 +126,8 @@
             this.txtName.Location = new System.Drawing.Point(111, 60);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(402, 20);
-            this.txtName.TabIndex = 10;
+            this.txtName.TabIndex = 3;
+            this.txtName.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtName_KeyDown);
             // 
             // labelControl1
             // 
@@ -178,7 +182,7 @@
             this.btnSearch.Location = new System.Drawing.Point(300, 5);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(104, 43);
-            this.btnSearch.TabIndex = 2;
+            this.btnSearch.TabIndex = 4;
             this.btnSearch.Text = "Search";
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
@@ -188,7 +192,7 @@
             this.btnCancel.Location = new System.Drawing.Point(410, 5);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(104, 43);
-            this.btnCancel.TabIndex = 3;
+            this.btnCancel.TabIndex = 5;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 

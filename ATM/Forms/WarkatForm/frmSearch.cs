@@ -24,7 +24,7 @@ namespace ATM.Forms.WarkatForm
             this.StartPosition = FormStartPosition.CenterScreen;
             // Remove the control box so the form will only display client area. 
             this.ControlBox = false;
-
+            this.txtTransactionCode.Select();
             this.txtTransactionCode.Text = frmWarkat.transactionCode;
             this.txtWarkatNo.Text = frmWarkat.warkatNo;
             this.txtDueDateFrom.Text = frmWarkat.dateFrom;
@@ -68,6 +68,54 @@ namespace ATM.Forms.WarkatForm
             else
             {
                 return false;
+            }
+        }
+
+        private void txtTransactionCode_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                txtWarkatNo.Focus();
+            }
+        }
+
+        private void txtWarkatNo_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                txtDueDateFrom.Focus();
+            }
+        }
+
+        private void txtDueDateFrom_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                txtDueDateTo.Focus();
+            }
+        }
+
+        private void txtDueDateTo_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                txtBankCode.Focus();
+            }
+        }
+
+        private void txtBankCode_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                txtAccountNo.Focus();
+            }
+        }
+
+        private void txtAccountNo_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btnSearch.Focus();
             }
         }
 

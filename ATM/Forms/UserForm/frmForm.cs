@@ -25,7 +25,7 @@ namespace ATM.Forms.UserForm
             // Remove the control box so the form will only display client area. 
             this.ControlBox = false;
             this.lblFormName.Text = formName;
-            this.txtFirstName.Focus();
+            this.txtFirstName.Select();
             //if is Edit = TRUE binding Data
             if (isEdit == true)
             {
@@ -103,6 +103,70 @@ namespace ATM.Forms.UserForm
             User.City = txtCity.Text;
             User.PostalCode = txtPostalCode.Text;
             model.Update();
+        }
+
+        private void txtFirstName_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                txtLastName.Focus();
+            }
+        }
+
+        private void txtLastName_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                txtUserName.Focus();
+            }
+        }
+
+        private void txtUserName_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                txtPassword.Focus();
+            }
+        }
+
+        private void txtPassword_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                txtTitle.Focus();
+            }
+        }
+
+        private void txtTitle_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                txtAddress.Focus();
+            }
+        }
+
+        private void txtAddress_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                txtCity.Focus();
+            }
+        }
+
+        private void txtCity_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                txtPostalCode.Focus();
+            }
+        }
+
+        private void txtPostalCode_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btnSave.Focus();
+            }
         }
 
     }

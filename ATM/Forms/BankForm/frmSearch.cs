@@ -45,6 +45,38 @@ namespace ATM.Forms.BankForm
             this.Close();
         }
 
+        private void txtCode_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                txtName.Focus();
+            }
+        }
+
+        private void txtInitial_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                txtName.Focus();
+            }
+        }
+
+        private void txtName_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                txtTypeKey.Focus();
+            }
+        }
+
+        private void txtTypeKey_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btnSearch.Focus();
+            }
+        }
+
         
     }
 }

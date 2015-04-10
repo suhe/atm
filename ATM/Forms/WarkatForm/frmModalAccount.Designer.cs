@@ -68,8 +68,8 @@
             this.panelControl1.Location = new System.Drawing.Point(0, 0);
             this.panelControl1.Name = "panelControl1";
             this.panelControl1.Size = new System.Drawing.Size(529, 51);
-            this.panelControl1.TabIndex = 1; 
-           // 
+            this.panelControl1.TabIndex = 1;
+            // 
             // pictureBox1
             // 
             this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
@@ -110,7 +110,7 @@
             this.btnReset.Location = new System.Drawing.Point(392, 6);
             this.btnReset.Name = "btnReset";
             this.btnReset.Size = new System.Drawing.Size(64, 23);
-            this.btnReset.TabIndex = 28;
+            this.btnReset.TabIndex = 3;
             this.btnReset.Text = "Reset";
             this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
             // 
@@ -120,7 +120,7 @@
             this.btnClose.Location = new System.Drawing.Point(460, 6);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(64, 23);
-            this.btnClose.TabIndex = 27;
+            this.btnClose.TabIndex = 4;
             this.btnClose.Text = "Close";
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
@@ -130,7 +130,7 @@
             this.btnFindAccount.Location = new System.Drawing.Point(324, 6);
             this.btnFindAccount.Name = "btnFindAccount";
             this.btnFindAccount.Size = new System.Drawing.Size(64, 23);
-            this.btnFindAccount.TabIndex = 26;
+            this.btnFindAccount.TabIndex = 2;
             this.btnFindAccount.Text = "Search";
             this.btnFindAccount.Click += new System.EventHandler(this.btnFindAccount_Click);
             // 
@@ -140,7 +140,7 @@
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.txtSearch.Size = new System.Drawing.Size(88, 20);
-            this.txtSearch.TabIndex = 4;
+            this.txtSearch.TabIndex = 1;
             // 
             // cmbType
             // 
@@ -154,7 +154,7 @@
             "Account No",
             "Account Name"});
             this.cmbType.Size = new System.Drawing.Size(76, 20);
-            this.cmbType.TabIndex = 3;
+            this.cmbType.TabIndex = 0;
             // 
             // panelControl2
             // 
@@ -174,7 +174,7 @@
             this.btnDelete.Location = new System.Drawing.Point(92, 2);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(45, 29);
-            this.btnDelete.TabIndex = 26;
+            this.btnDelete.TabIndex = 7;
             this.btnDelete.Text = "&Del";
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
@@ -185,7 +185,7 @@
             this.btnEdit.Location = new System.Drawing.Point(47, 2);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(45, 29);
-            this.btnEdit.TabIndex = 25;
+            this.btnEdit.TabIndex = 6;
             this.btnEdit.Text = "&Edit";
             this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
@@ -196,7 +196,7 @@
             this.btnAdd.Location = new System.Drawing.Point(2, 2);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(45, 29);
-            this.btnAdd.TabIndex = 24;
+            this.btnAdd.TabIndex = 5;
             this.btnAdd.Text = "&Add";
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 

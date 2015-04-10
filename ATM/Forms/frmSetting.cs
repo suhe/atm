@@ -12,6 +12,7 @@ namespace ATM.Forms
         public frmSetting()
         {
             InitializeComponent();
+            this.txtFirstName.Select();
             ProfileForm model = new ProfileForm();
             if (model.MyProfile())
             {
@@ -95,6 +96,70 @@ namespace ATM.Forms
             ProfileForm.Password = txtNewPassword.Text;
             model.ChangePassword();
             return true;
+        }
+
+        private void txtFirstName_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                txtLastName.Focus();
+            }
+        }
+
+        private void txtLastName_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                txtTitle.Focus();
+            }
+        }
+
+        private void txtTitle_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                txtAddress.Focus();
+            }
+        }
+
+        private void txtAddress_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                txtCity.Focus();
+            }
+        }
+
+        private void txtCity_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                txtPostalCode.Focus();
+            }
+        }
+
+        private void txtPostalCode_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btnSave.Focus();
+            }
+        }
+
+        private void txtNewPassword_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                txtConfirmPassword.Focus();
+            }
+        }
+
+        private void txtConfirmPassword_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btnChangePassword.Focus();
+            }
         }
 
 

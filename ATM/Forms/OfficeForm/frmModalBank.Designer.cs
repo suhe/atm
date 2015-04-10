@@ -77,7 +77,7 @@
             this.btnReset.Location = new System.Drawing.Point(391, 10);
             this.btnReset.Name = "btnReset";
             this.btnReset.Size = new System.Drawing.Size(64, 23);
-            this.btnReset.TabIndex = 25;
+            this.btnReset.TabIndex = 3;
             this.btnReset.Text = "Reset";
             this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
             // 
@@ -87,7 +87,7 @@
             this.btnClose.Location = new System.Drawing.Point(459, 10);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(64, 23);
-            this.btnClose.TabIndex = 24;
+            this.btnClose.TabIndex = 4;
             this.btnClose.Text = "Close";
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
@@ -97,7 +97,7 @@
             this.btnFind.Location = new System.Drawing.Point(323, 10);
             this.btnFind.Name = "btnFind";
             this.btnFind.Size = new System.Drawing.Size(64, 23);
-            this.btnFind.TabIndex = 23;
+            this.btnFind.TabIndex = 2;
             this.btnFind.Text = "Search";
             this.btnFind.Click += new System.EventHandler(this.btnFind_Click);
             // 
@@ -113,7 +113,7 @@
             "Bank Code",
             "Bank Name"});
             this.cmbType.Size = new System.Drawing.Size(143, 20);
-            this.cmbType.TabIndex = 2;
+            this.cmbType.TabIndex = 0;
             // 
             // txtSearch
             // 
@@ -122,6 +122,7 @@
             this.txtSearch.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.txtSearch.Size = new System.Drawing.Size(165, 20);
             this.txtSearch.TabIndex = 1;
+            this.txtSearch.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtSearch_KeyDown);
             // 
             // panelControl3
             // 
@@ -142,7 +143,6 @@
             this.gridControl1.TabIndex = 0;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
-           
             // 
             // gridView1
             // 

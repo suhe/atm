@@ -38,14 +38,14 @@
             this.btnSearch = new DevExpress.XtraEditors.SimpleButton();
             this.btnCancel = new DevExpress.XtraEditors.SimpleButton();
             this.panelControl3 = new DevExpress.XtraEditors.PanelControl();
+            this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
+            this.txtAddress = new DevExpress.XtraEditors.TextEdit();
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
             this.txtOfficeName = new DevExpress.XtraEditors.TextEdit();
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
             this.txtBankName = new DevExpress.XtraEditors.TextEdit();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.txtBankCode = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
-            this.txtAddress = new DevExpress.XtraEditors.TextEdit();
             ((System.ComponentModel.ISupportInitialize)(this.txtOfficeCode.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
@@ -54,10 +54,10 @@
             this.panelControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).BeginInit();
             this.panelControl3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtAddress.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtOfficeName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtBankName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtBankCode.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtAddress.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // txtOfficeCode
@@ -66,6 +66,7 @@
             this.txtOfficeCode.Name = "txtOfficeCode";
             this.txtOfficeCode.Size = new System.Drawing.Size(402, 20);
             this.txtOfficeCode.TabIndex = 0;
+            this.txtOfficeCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtOfficeCode_KeyDown);
             // 
             // labelControl1
             // 
@@ -120,7 +121,7 @@
             this.btnSearch.Location = new System.Drawing.Point(300, 5);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(104, 43);
-            this.btnSearch.TabIndex = 2;
+            this.btnSearch.TabIndex = 5;
             this.btnSearch.Text = "Search";
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
@@ -130,7 +131,7 @@
             this.btnCancel.Location = new System.Drawing.Point(410, 5);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(104, 43);
-            this.btnCancel.TabIndex = 3;
+            this.btnCancel.TabIndex = 6;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
@@ -152,6 +153,22 @@
             this.panelControl3.Size = new System.Drawing.Size(540, 149);
             this.panelControl3.TabIndex = 6;
             // 
+            // labelControl6
+            // 
+            this.labelControl6.Location = new System.Drawing.Point(12, 113);
+            this.labelControl6.Name = "labelControl6";
+            this.labelControl6.Size = new System.Drawing.Size(39, 13);
+            this.labelControl6.TabIndex = 9;
+            this.labelControl6.Text = "Address";
+            // 
+            // txtAddress
+            // 
+            this.txtAddress.Location = new System.Drawing.Point(112, 110);
+            this.txtAddress.Name = "txtAddress";
+            this.txtAddress.Size = new System.Drawing.Size(402, 20);
+            this.txtAddress.TabIndex = 4;
+            this.txtAddress.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtAddress_KeyDown);
+            // 
             // labelControl5
             // 
             this.labelControl5.Location = new System.Drawing.Point(12, 87);
@@ -165,7 +182,8 @@
             this.txtOfficeName.Location = new System.Drawing.Point(112, 84);
             this.txtOfficeName.Name = "txtOfficeName";
             this.txtOfficeName.Size = new System.Drawing.Size(402, 20);
-            this.txtOfficeName.TabIndex = 6;
+            this.txtOfficeName.TabIndex = 3;
+            this.txtOfficeName.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtOfficeName_KeyDown);
             // 
             // labelControl4
             // 
@@ -180,7 +198,8 @@
             this.txtBankName.Location = new System.Drawing.Point(112, 58);
             this.txtBankName.Name = "txtBankName";
             this.txtBankName.Size = new System.Drawing.Size(402, 20);
-            this.txtBankName.TabIndex = 4;
+            this.txtBankName.TabIndex = 2;
+            this.txtBankName.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtBankName_KeyDown);
             // 
             // labelControl3
             // 
@@ -195,22 +214,8 @@
             this.txtBankCode.Location = new System.Drawing.Point(112, 32);
             this.txtBankCode.Name = "txtBankCode";
             this.txtBankCode.Size = new System.Drawing.Size(402, 20);
-            this.txtBankCode.TabIndex = 2;
-            // 
-            // labelControl6
-            // 
-            this.labelControl6.Location = new System.Drawing.Point(12, 113);
-            this.labelControl6.Name = "labelControl6";
-            this.labelControl6.Size = new System.Drawing.Size(39, 13);
-            this.labelControl6.TabIndex = 9;
-            this.labelControl6.Text = "Address";
-            // 
-            // txtAddress
-            // 
-            this.txtAddress.Location = new System.Drawing.Point(112, 110);
-            this.txtAddress.Name = "txtAddress";
-            this.txtAddress.Size = new System.Drawing.Size(402, 20);
-            this.txtAddress.TabIndex = 8;
+            this.txtBankCode.TabIndex = 1;
+            this.txtBankCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtBankCode_KeyDown);
             // 
             // frmSearch
             // 
@@ -233,10 +238,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).EndInit();
             this.panelControl3.ResumeLayout(false);
             this.panelControl3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtAddress.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtOfficeName.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtBankName.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtBankCode.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtAddress.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }

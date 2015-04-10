@@ -122,7 +122,7 @@
             this.btnSave.Location = new System.Drawing.Point(364, 18);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(69, 23);
-            this.btnSave.TabIndex = 2;
+            this.btnSave.TabIndex = 10;
             this.btnSave.Text = "&Save";
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
@@ -132,7 +132,7 @@
             this.btnCancel.Location = new System.Drawing.Point(440, 17);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(74, 24);
-            this.btnCancel.TabIndex = 3;
+            this.btnCancel.TabIndex = 11;
             this.btnCancel.Text = "&Cancel";
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
@@ -173,7 +173,7 @@
             this.btnFind.Location = new System.Drawing.Point(484, 33);
             this.btnFind.Name = "btnFind";
             this.btnFind.Size = new System.Drawing.Size(29, 23);
-            this.btnFind.TabIndex = 22;
+            this.btnFind.TabIndex = 2;
             this.btnFind.Click += new System.EventHandler(this.btnFind_Click);
             // 
             // labelControl13
@@ -190,7 +190,8 @@
             this.txtContactPhone.Name = "txtContactPhone";
             this.txtContactPhone.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.txtContactPhone.Size = new System.Drawing.Size(402, 20);
-            this.txtContactPhone.TabIndex = 20;
+            this.txtContactPhone.TabIndex = 9;
+            this.txtContactPhone.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtContactPhone_KeyDown);
             // 
             // labelControl12
             // 
@@ -242,7 +243,8 @@
             this.txtKliringKey.Name = "txtKliringKey";
             this.txtKliringKey.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.txtKliringKey.Size = new System.Drawing.Size(402, 20);
-            this.txtKliringKey.TabIndex = 14;
+            this.txtKliringKey.TabIndex = 8;
+            this.txtKliringKey.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtKliringKey_KeyDown);
             // 
             // labelControl8
             // 
@@ -258,7 +260,8 @@
             this.txtSatkerKey.Name = "txtSatkerKey";
             this.txtSatkerKey.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.txtSatkerKey.Size = new System.Drawing.Size(402, 20);
-            this.txtSatkerKey.TabIndex = 12;
+            this.txtSatkerKey.TabIndex = 7;
+            this.txtSatkerKey.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtSatkerKey_KeyDown);
             // 
             // labelControl7
             // 
@@ -274,7 +277,8 @@
             this.txtProvinceKey.Name = "txtProvinceKey";
             this.txtProvinceKey.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.txtProvinceKey.Size = new System.Drawing.Size(402, 20);
-            this.txtProvinceKey.TabIndex = 10;
+            this.txtProvinceKey.TabIndex = 6;
+            this.txtProvinceKey.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtProvinceKey_KeyDown);
             // 
             // labelControl6
             // 
@@ -290,7 +294,8 @@
             this.txtCityKey.Name = "txtCityKey";
             this.txtCityKey.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.txtCityKey.Size = new System.Drawing.Size(402, 20);
-            this.txtCityKey.TabIndex = 8;
+            this.txtCityKey.TabIndex = 5;
+            this.txtCityKey.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtCityKey_KeyDown);
             // 
             // labelControl5
             // 
@@ -306,7 +311,8 @@
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.txtAddress.Size = new System.Drawing.Size(402, 20);
-            this.txtAddress.TabIndex = 6;
+            this.txtAddress.TabIndex = 4;
+            this.txtAddress.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtAddress_KeyDown);
             // 
             // labelControl4
             // 
@@ -322,7 +328,8 @@
             this.txtOfficeName.Name = "txtOfficeName";
             this.txtOfficeName.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.txtOfficeName.Size = new System.Drawing.Size(402, 20);
-            this.txtOfficeName.TabIndex = 4;
+            this.txtOfficeName.TabIndex = 3;
+            this.txtOfficeName.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtOfficeName_KeyDown);
             // 
             // labelControl3
             // 
@@ -339,7 +346,8 @@
             this.txtBankCode.Name = "txtBankCode";
             this.txtBankCode.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.txtBankCode.Size = new System.Drawing.Size(371, 20);
-            this.txtBankCode.TabIndex = 2;
+            this.txtBankCode.TabIndex = 1;
+            this.txtBankCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtBankCode_KeyDown);
             // 
             // labelControl1
             // 
@@ -356,6 +364,7 @@
             this.txtOfficeCode.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.txtOfficeCode.Size = new System.Drawing.Size(402, 20);
             this.txtOfficeCode.TabIndex = 0;
+            this.txtOfficeCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtOfficeCode_KeyDown);
             // 
             // frmForm
             // 

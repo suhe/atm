@@ -20,7 +20,7 @@ namespace ATM.Forms.OfficeForm
             this.StartPosition = FormStartPosition.CenterScreen;
             // Remove the control box so the form will only display client area. 
             this.ControlBox = false;
-
+            this.txtOfficeCode.Select();
             this.txtOfficeCode.Text = frmOffice.officeCode;
             this.txtBankCode.Text = frmOffice.bankCode;
             this.txtBankName.Text = frmOffice.bankName;
@@ -43,6 +43,46 @@ namespace ATM.Forms.OfficeForm
 
             this.loadData();
             this.Close();
+        }
+
+        private void txtOfficeCode_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                txtBankCode.Focus();
+            }
+        }
+
+        private void txtBankCode_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                txtBankName.Focus();
+            }
+        }
+
+        private void txtBankName_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                txtOfficeName.Focus();
+            }
+        }
+
+        private void txtOfficeName_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                txtAddress.Focus();
+            }
+        }
+
+        private void txtAddress_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btnSearch.Focus();
+            }
         }
     }
 }

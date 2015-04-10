@@ -25,6 +25,7 @@ namespace ATM.Forms.WarkatForm
             this.StartPosition = FormStartPosition.CenterScreen;
             // Remove the control box so the form will only display client area. 
             this.ControlBox = false;
+            this.txtSearch.Select();
             //load data
             this.loadData();
 
@@ -84,6 +85,14 @@ namespace ATM.Forms.WarkatForm
             bankCode = "";
             bankName = "";
             this.loadData();
+        }
+
+        private void txtSearch_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btnFind_Click(sender, e);
+            }
         }
 
         

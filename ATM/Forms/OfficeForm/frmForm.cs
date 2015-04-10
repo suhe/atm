@@ -34,6 +34,7 @@ namespace ATM.Forms.OfficeForm
             {
                 //disabled code
                 txtOfficeCode.Enabled = false;
+                txtOfficeName.Select();
                 Office model = new Office();
                 model.DataReader();
                 this.txtOfficeCode.Text = Office.OfficeCode;
@@ -45,6 +46,10 @@ namespace ATM.Forms.OfficeForm
                 this.txtSatkerKey.Text = Office.SetKerKey;
                 this.txtKliringKey.Text = Office.KliringKey;
                 this.txtContactPhone.Text = Office.ContactPhone;
+            }
+            else
+            {
+                txtOfficeCode.Select();
             }
         }
 
@@ -137,6 +142,78 @@ namespace ATM.Forms.OfficeForm
         private void loadBankData()
         {
             txtBankCode.Text = BankCode;
+        }
+
+        private void txtOfficeCode_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                txtBankCode.Focus();
+            }
+        }
+
+        private void txtBankCode_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                txtOfficeName.Focus();
+            }
+        }
+
+        private void txtOfficeName_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                txtAddress.Focus();
+            }
+        }
+
+        private void txtAddress_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                txtCityKey.Focus();
+            }
+        }
+
+        private void txtCityKey_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                txtProvinceKey.Focus();
+            }
+        }
+
+        private void txtProvinceKey_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                txtSatkerKey.Focus();
+            }
+        }
+
+        private void txtSatkerKey_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                txtKliringKey.Focus();
+            }
+        }
+
+        private void txtKliringKey_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                txtContactPhone.Focus();
+            }
+        }
+
+        private void txtContactPhone_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btnSave.Focus();
+            }
         }
 
     }

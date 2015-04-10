@@ -110,7 +110,7 @@
             this.btnSearch.Location = new System.Drawing.Point(300, 5);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(104, 43);
-            this.btnSearch.TabIndex = 2;
+            this.btnSearch.TabIndex = 6;
             this.btnSearch.Text = "Search";
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
@@ -120,7 +120,7 @@
             this.btnCancel.Location = new System.Drawing.Point(410, 5);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(104, 43);
-            this.btnCancel.TabIndex = 3;
+            this.btnCancel.TabIndex = 7;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
@@ -160,7 +160,8 @@
             this.txtDueDateTo.Properties.VistaTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton()});
             this.txtDueDateTo.Size = new System.Drawing.Size(100, 20);
-            this.txtDueDateTo.TabIndex = 26;
+            this.txtDueDateTo.TabIndex = 3;
+            this.txtDueDateTo.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtDueDateTo_KeyDown);
             // 
             // labelControl7
             // 
@@ -186,7 +187,8 @@
             this.txtDueDateFrom.Properties.VistaTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton()});
             this.txtDueDateFrom.Size = new System.Drawing.Size(100, 20);
-            this.txtDueDateFrom.TabIndex = 24;
+            this.txtDueDateFrom.TabIndex = 2;
+            this.txtDueDateFrom.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtDueDateFrom_KeyDown);
             // 
             // labelControl6
             // 
@@ -201,7 +203,8 @@
             this.txtAccountNo.Location = new System.Drawing.Point(112, 110);
             this.txtAccountNo.Name = "txtAccountNo";
             this.txtAccountNo.Size = new System.Drawing.Size(402, 20);
-            this.txtAccountNo.TabIndex = 8;
+            this.txtAccountNo.TabIndex = 5;
+            this.txtAccountNo.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtAccountNo_KeyDown);
             // 
             // labelControl5
             // 
@@ -216,7 +219,8 @@
             this.txtBankCode.Location = new System.Drawing.Point(112, 84);
             this.txtBankCode.Name = "txtBankCode";
             this.txtBankCode.Size = new System.Drawing.Size(402, 20);
-            this.txtBankCode.TabIndex = 6;
+            this.txtBankCode.TabIndex = 4;
+            this.txtBankCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtBankCode_KeyDown);
             // 
             // labelControl4
             // 
@@ -239,7 +243,8 @@
             this.txtWarkatNo.Location = new System.Drawing.Point(112, 32);
             this.txtWarkatNo.Name = "txtWarkatNo";
             this.txtWarkatNo.Size = new System.Drawing.Size(402, 20);
-            this.txtWarkatNo.TabIndex = 2;
+            this.txtWarkatNo.TabIndex = 1;
+            this.txtWarkatNo.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtWarkatNo_KeyDown);
             // 
             // labelControl1
             // 
@@ -255,6 +260,7 @@
             this.txtTransactionCode.Name = "txtTransactionCode";
             this.txtTransactionCode.Size = new System.Drawing.Size(402, 20);
             this.txtTransactionCode.TabIndex = 0;
+            this.txtTransactionCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtTransactionCode_KeyDown);
             // 
             // frmSearch
             // 

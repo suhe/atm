@@ -108,7 +108,7 @@
             this.btnSave.Location = new System.Drawing.Point(364, 18);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(69, 23);
-            this.btnSave.TabIndex = 2;
+            this.btnSave.TabIndex = 5;
             this.btnSave.Text = "&Save";
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
@@ -118,7 +118,7 @@
             this.btnCancel.Location = new System.Drawing.Point(440, 17);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(74, 24);
-            this.btnCancel.TabIndex = 3;
+            this.btnCancel.TabIndex = 6;
             this.btnCancel.Text = "&Cancel";
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
@@ -184,7 +184,8 @@
             this.txtStatus.Name = "txtStatus";
             this.txtStatus.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.txtStatus.Size = new System.Drawing.Size(402, 20);
-            this.txtStatus.TabIndex = 10;
+            this.txtStatus.TabIndex = 4;
+            this.txtStatus.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtStatus_KeyDown);
             this.txtStatus.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtStatus_KeyPress);
             // 
             // labelControl6
@@ -201,7 +202,8 @@
             this.txtTypeKey.Name = "txtTypeKey";
             this.txtTypeKey.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.txtTypeKey.Size = new System.Drawing.Size(402, 20);
-            this.txtTypeKey.TabIndex = 8;
+            this.txtTypeKey.TabIndex = 3;
+            this.txtTypeKey.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtTypeKey_KeyDown);
             // 
             // labelControl5
             // 
@@ -217,7 +219,8 @@
             this.txtInitial.Name = "txtInitial";
             this.txtInitial.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.txtInitial.Size = new System.Drawing.Size(402, 20);
-            this.txtInitial.TabIndex = 6;
+            this.txtInitial.TabIndex = 2;
+            this.txtInitial.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtInitial_KeyDown);
             // 
             // labelControl4
             // 
@@ -233,7 +236,8 @@
             this.txtName.Name = "txtName";
             this.txtName.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.txtName.Size = new System.Drawing.Size(402, 20);
-            this.txtName.TabIndex = 4;
+            this.txtName.TabIndex = 1;
+            this.txtName.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtName_KeyDown);
             // 
             // labelControl1
             // 
@@ -250,6 +254,7 @@
             this.txtCode.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.txtCode.Size = new System.Drawing.Size(402, 20);
             this.txtCode.TabIndex = 0;
+            this.txtCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtCode_KeyDown);
             // 
             // frmForm
             // 
@@ -262,6 +267,7 @@
             this.Name = "frmForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmForm";
+            this.Load += new System.EventHandler(this.frmForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
             this.panelControl1.PerformLayout();

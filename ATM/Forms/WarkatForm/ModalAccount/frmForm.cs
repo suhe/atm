@@ -30,11 +30,16 @@ namespace ATM.Forms.WarkatForm.ModalAccount
             if (isEdit == true)
             {
                 //disabled code
-                txtAccountNo.Enabled = false;
+                this.txtAccountNo.Enabled = false;
+                this.txtAccountName.Select();
                 Account model = new Account();
                 model.DataReader();
                 this.txtAccountNo.Text = Account.AccountNo;
                 this.txtAccountName.Text = Account.AccountName;
+            }
+            else
+            {
+                this.txtAccountNo.Select();
             }
 
         }
@@ -96,6 +101,22 @@ namespace ATM.Forms.WarkatForm.ModalAccount
         private void btnCancel_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void txtAccountNo_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                txtAccountName.Focus();
+            }
+        }
+
+        private void txtAccountName_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btnSave.Focus();
+            }
         }
 
     }

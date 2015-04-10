@@ -18,6 +18,7 @@ namespace ATM.Forms
             this.StartPosition = FormStartPosition.CenterScreen;
             // Remove the control box so the form will only display client area. 
             this.ControlBox = false;
+            this.txtUsername.Select();
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
@@ -56,6 +57,22 @@ namespace ATM.Forms
                 return true;
             else
                 return false;
+        }
+
+        private void txtUsername_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                txtPassword.Focus();
+            }
+        }
+
+        private void txtPassword_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btnLogin.Focus();
+            }
         }
 
     }

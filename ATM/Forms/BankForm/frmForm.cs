@@ -25,12 +25,12 @@ namespace ATM.Forms.BankForm
             // Remove the control box so the form will only display client area. 
             this.ControlBox = false;
             this.lblFormName.Text = formName;
-            this.txtCode.Focus();
             //if is Edit = TRUE binding Data
             if (isEdit == true)
             {
                 //disabled code
                 txtCode.Enabled = false;
+                txtName.Select();
                 Bank model = new Bank();
                 model.DataReader();
                 this.txtCode.Text = Bank.BankCode;
@@ -38,6 +38,10 @@ namespace ATM.Forms.BankForm
                 this.txtInitial.Text = Bank.BankInitial;
                 this.txtTypeKey.Text = Bank.TypeKey;
                 this.txtStatus.Text = Bank.Status.ToString();
+            }
+            else
+            {
+                txtCode.Select();
             }
         }
 
@@ -110,13 +114,57 @@ namespace ATM.Forms.BankForm
             model.Update();
         }
 
-        
 
         private void txtStatus_KeyPress(object sender, KeyPressEventArgs e)
         {
+            
             e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
         }
 
+        private void txtCode_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                txtName.Focus();
+            }
+        }
+
+        private void frmForm_Load(object sender, EventArgs e)
+        {
+            this.txtCode.Focus();
+        }
+
+        private void txtName_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                txtInitial.Focus();
+            }
+        }
+
+        private void txtInitial_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                txtTypeKey.Focus();
+            }
+        }
+
+        private void txtTypeKey_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                txtStatus.Focus();
+            }
+        }
+
+        private void txtStatus_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btnSave.Focus();
+            }
+        }
 
     }
 }

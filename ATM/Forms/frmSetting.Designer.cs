@@ -114,7 +114,7 @@
             this.btnChangePassword.Location = new System.Drawing.Point(439, 60);
             this.btnChangePassword.Name = "btnChangePassword";
             this.btnChangePassword.Size = new System.Drawing.Size(75, 27);
-            this.btnChangePassword.TabIndex = 20;
+            this.btnChangePassword.TabIndex = 2;
             this.btnChangePassword.Text = "&Change";
             this.btnChangePassword.Click += new System.EventHandler(this.btnChangePassword_Click);
             // 
@@ -151,7 +151,8 @@
             this.txtConfirmPassword.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.txtConfirmPassword.Properties.PasswordChar = '*';
             this.txtConfirmPassword.Size = new System.Drawing.Size(402, 20);
-            this.txtConfirmPassword.TabIndex = 2;
+            this.txtConfirmPassword.TabIndex = 1;
+            this.txtConfirmPassword.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtConfirmPassword_KeyDown);
             // 
             // labelControl20
             // 
@@ -169,6 +170,7 @@
             this.txtNewPassword.Properties.PasswordChar = '*';
             this.txtNewPassword.Size = new System.Drawing.Size(402, 20);
             this.txtNewPassword.TabIndex = 0;
+            this.txtNewPassword.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtNewPassword_KeyDown);
             // 
             // xtraTabPage1
             // 
@@ -206,7 +208,7 @@
             this.btnSave.Location = new System.Drawing.Point(438, 182);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(75, 27);
-            this.btnSave.TabIndex = 19;
+            this.btnSave.TabIndex = 6;
             this.btnSave.Text = "&Update";
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
@@ -242,7 +244,8 @@
             this.txtPostalCode.Name = "txtPostalCode";
             this.txtPostalCode.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.txtPostalCode.Size = new System.Drawing.Size(402, 20);
-            this.txtPostalCode.TabIndex = 14;
+            this.txtPostalCode.TabIndex = 5;
+            this.txtPostalCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtPostalCode_KeyDown);
             // 
             // labelControl8
             // 
@@ -258,7 +261,8 @@
             this.txtCity.Name = "txtCity";
             this.txtCity.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.txtCity.Size = new System.Drawing.Size(402, 20);
-            this.txtCity.TabIndex = 12;
+            this.txtCity.TabIndex = 4;
+            this.txtCity.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtCity_KeyDown);
             // 
             // labelControl7
             // 
@@ -274,7 +278,8 @@
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.txtAddress.Size = new System.Drawing.Size(402, 20);
-            this.txtAddress.TabIndex = 10;
+            this.txtAddress.TabIndex = 3;
+            this.txtAddress.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtAddress_KeyDown);
             // 
             // labelControl6
             // 
@@ -290,7 +295,8 @@
             this.txtTitle.Name = "txtTitle";
             this.txtTitle.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.txtTitle.Size = new System.Drawing.Size(402, 20);
-            this.txtTitle.TabIndex = 8;
+            this.txtTitle.TabIndex = 2;
+            this.txtTitle.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtTitle_KeyDown);
             // 
             // labelControl3
             // 
@@ -306,7 +312,8 @@
             this.txtLastName.Name = "txtLastName";
             this.txtLastName.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.txtLastName.Size = new System.Drawing.Size(402, 20);
-            this.txtLastName.TabIndex = 2;
+            this.txtLastName.TabIndex = 1;
+            this.txtLastName.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtLastName_KeyDown);
             // 
             // labelControl1
             // 
@@ -323,6 +330,7 @@
             this.txtFirstName.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.txtFirstName.Size = new System.Drawing.Size(402, 20);
             this.txtFirstName.TabIndex = 0;
+            this.txtFirstName.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtFirstName_KeyDown);
             // 
             // frmSetting
             // 

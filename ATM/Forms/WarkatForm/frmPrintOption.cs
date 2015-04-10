@@ -22,6 +22,7 @@ namespace ATM.Forms.WarkatForm
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.StartPosition = FormStartPosition.CenterScreen;
+            this.txtDueDateFrom.Select();
         }
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -114,6 +115,30 @@ namespace ATM.Forms.WarkatForm
         private void loadAccountTo()
         {
             txtToAccountID.Text = AccountToNo;
+        }
+
+        private void txtDueDateFrom_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                txtDueDateTo.Focus();
+            }
+        }
+
+        private void txtDueDateTo_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                chAllAccount.Focus();
+            }
+        }
+
+        private void txtFromAccountID_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                txtToAccountID.Focus();
+            }
         }
    
     }

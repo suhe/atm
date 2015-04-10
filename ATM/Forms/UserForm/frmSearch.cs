@@ -20,7 +20,7 @@ namespace ATM.Forms.UserForm
             this.StartPosition = FormStartPosition.CenterScreen;
             // Remove the control box so the form will only display client area. 
             this.ControlBox = false;
-
+            this.txtFirstName.Select();
             this.txtFirstName.Text = frmUser.firstName;
             this.txtLastName.Text = frmUser.lastName;
             this.txtUserName.Text = frmUser.userName;
@@ -40,6 +40,38 @@ namespace ATM.Forms.UserForm
             frmUser.city = this.txtCity.Text;
             this.loadData();
             this.Close();
+        }
+
+        private void txtFirstName_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                txtLastName.Focus();
+            }
+        }
+
+        private void txtLastName_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                txtUserName.Focus();
+            }
+        }
+
+        private void txtUserName_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                txtCity.Focus();
+            }
+        }
+
+        private void txtCity_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btnSearch.Focus();
+            }
         }
     }
 }

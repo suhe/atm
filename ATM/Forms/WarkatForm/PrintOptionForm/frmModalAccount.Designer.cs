@@ -30,8 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmModalAccount));
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
-            this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.panelControl3 = new DevExpress.XtraEditors.PanelControl();
             this.btnReset = new DevExpress.XtraEditors.SimpleButton();
             this.btnClose = new DevExpress.XtraEditors.SimpleButton();
@@ -61,16 +61,6 @@
             this.panelControl1.Size = new System.Drawing.Size(529, 51);
             this.panelControl1.TabIndex = 2;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(31, 16);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(183, 14);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Account Group Management";
-            // 
             // pictureBox1
             // 
             this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
@@ -80,6 +70,16 @@
             this.pictureBox1.Size = new System.Drawing.Size(16, 16);
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(31, 16);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(183, 14);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Account Group Management";
             // 
             // panelControl3
             // 
@@ -100,7 +100,7 @@
             this.btnReset.Location = new System.Drawing.Point(392, 6);
             this.btnReset.Name = "btnReset";
             this.btnReset.Size = new System.Drawing.Size(64, 23);
-            this.btnReset.TabIndex = 28;
+            this.btnReset.TabIndex = 3;
             this.btnReset.Text = "Reset";
             this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
             // 
@@ -110,7 +110,7 @@
             this.btnClose.Location = new System.Drawing.Point(460, 6);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(64, 23);
-            this.btnClose.TabIndex = 27;
+            this.btnClose.TabIndex = 4;
             this.btnClose.Text = "Close";
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
@@ -120,7 +120,7 @@
             this.btnFindAccount.Location = new System.Drawing.Point(324, 6);
             this.btnFindAccount.Name = "btnFindAccount";
             this.btnFindAccount.Size = new System.Drawing.Size(64, 23);
-            this.btnFindAccount.TabIndex = 26;
+            this.btnFindAccount.TabIndex = 2;
             this.btnFindAccount.Text = "Search";
             this.btnFindAccount.Click += new System.EventHandler(this.btnFindAccount_Click);
             // 
@@ -130,7 +130,8 @@
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.txtSearch.Size = new System.Drawing.Size(209, 20);
-            this.txtSearch.TabIndex = 4;
+            this.txtSearch.TabIndex = 1;
+            this.txtSearch.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtSearch_KeyDown);
             // 
             // cmbType
             // 
@@ -144,7 +145,7 @@
             "Account No",
             "Account Name"});
             this.cmbType.Size = new System.Drawing.Size(91, 20);
-            this.cmbType.TabIndex = 3;
+            this.cmbType.TabIndex = 0;
             // 
             // gridControl1
             // 
