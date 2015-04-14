@@ -188,6 +188,12 @@
     <Compile Include="Forms\UserForm\frmSearch.Designer.cs">
       <DependentUpon>frmSearch.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\WarkatForm\frmExpired.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\WarkatForm\frmExpired.Designer.cs">
+      <DependentUpon>frmExpired.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\WarkatForm\frmForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -263,6 +269,12 @@
       <DependentUpon>crList.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Reports\Warkat\crExpiredDueDate.cs">
+      <DependentUpon>crExpiredDueDate.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
     <Compile Include="Reports\Warkat\crAccountDueDate.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -312,6 +324,9 @@
     <EmbeddedResource Include="Forms\UserForm\frmSearch.resx">
       <DependentUpon>frmSearch.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\WarkatForm\frmExpired.resx">
+      <DependentUpon>frmExpired.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\WarkatForm\frmForm.resx">
       <DependentUpon>frmForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -357,6 +372,10 @@
     <EmbeddedResource Include="Reports\Office\crList.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>crList.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Warkat\crExpiredDueDate.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crExpiredDueDate.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\Warkat\crAccountDueDate.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>

@@ -109,7 +109,6 @@ namespace ATM.Forms
         private void btnPrint_Click(object sender, EventArgs e)
         {
             frmPrintOption frm = new frmPrintOption();
-            //frm.loadData += new frmSearch.DoEvent(loadData);
             frm.ShowDialog();
         }
 

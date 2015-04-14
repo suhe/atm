@@ -8,6 +8,8 @@ namespace ATM
 {
     public partial class frmMainMenu : Form
     {
+        public static bool isExpired = false;
+ 
         public frmMainMenu()
         {
             InitializeComponent();
@@ -59,6 +61,15 @@ namespace ATM
         {
             Forms.frmWarkat frm = new Forms.frmWarkat();
             frm.Show();
+        }
+
+        private void frmMainMenu_Load(object sender, EventArgs e)
+        {
+            if (isExpired == true)
+            {
+                Forms.WarkatForm.frmExpired frm = new Forms.WarkatForm.frmExpired();
+                frm.ShowDialog();
+            }
         }
     }
 }

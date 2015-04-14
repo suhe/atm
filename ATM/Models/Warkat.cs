@@ -52,6 +52,39 @@ namespace ATM.Models
             return dt;
         }
 
+        public DataTable dataSourceByExpired()
+        {
+            SqlCommand cmd = new SqlCommand();
+            Connection conn = new Connection();
+            cmd.CommandText = "[dbo].[Sp_Select_By_Expired_Warkat]";
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Connection = conn.OpenDB();
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            conn.CloseDB();
+            return dt;
+        }
+
+        public int CountDataSourceByExpired()
+        {
+            SqlCommand cmd = new SqlCommand();
+            Connection conn = new Connection();
+            cmd.CommandText = "[dbo].[Sp_Count_By_Expired_Warkat]";
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Connection = conn.OpenDB();
+            SqlDataReader DR = cmd.ExecuteReader();
+            //binding data
+            int total = 0;
+            if (DR.Read())
+            {
+                total += int.Parse(DR.GetValue(0).ToString());
+            }
+            
+            conn.CloseDB();
+            return total;
+        }
+
         public bool DataReader()
         {
             SqlCommand cmd = new SqlCommand();
@@ -194,6 +227,20 @@ namespace ATM.Models
             cmd.Parameters.Add(new SqlParameter("@DateTo", dateTo));
             cmd.Parameters.Add(new SqlParameter("@AccountFromID", AccountFromID));
             cmd.Parameters.Add(new SqlParameter("@AccountToID", AccountToID));
+            cmd.Connection = conn.OpenDB();
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataSet ds = new DataSet();
+            da.Fill(ds);
+            conn.CloseDB();
+            return ds;
+        }
+
+        public DataSet findByExpired()
+        {
+            SqlCommand cmd = new SqlCommand();
+            Connection conn = new Connection();
+            cmd.CommandText = "[dbo].[Sp_Select_By_Expired_Warkat]";
+            cmd.CommandType = CommandType.StoredProcedure;
             cmd.Connection = conn.OpenDB();
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataSet ds = new DataSet();

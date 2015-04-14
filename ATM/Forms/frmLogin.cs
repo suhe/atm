@@ -4,6 +4,7 @@ using System.Linq;
 using System.Windows.Forms;
 using ATM.Vendor.Vileosoft.Forms;
 using ATM.Models;
+using DevExpress.XtraEditors;
 
 namespace ATM.Forms
 {
@@ -35,9 +36,26 @@ namespace ATM.Forms
                 LoginForm model = new LoginForm();
                 if (model.isLogin() == true)
                 {
+                    //MessageBox Before Login
+                    Warkat model2 = new Warkat();
+                    int total = model2.CountDataSourceByExpired();
+                    if (total > 0)
+                    {
+                        DialogResult WarningMsg = XtraMessageBox.Show("Expired Due Date Total is " + total + " Data, Your must Login for Preview ?", "Due Date Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                        if (WarningMsg == DialogResult.No)
+                        {
+                            frmMainMenu.isExpired = false;
+                        }
+                        else
+                        {
+                            frmMainMenu.isExpired = true;
+                        }
+                    }
+
                     this.Hide();
-                    var frm = new frmMainMenu();
+                    frmMainMenu frm = new frmMainMenu();
                     frm.Show();
+                    
                 }
                 else
                 {
@@ -72,6 +90,21 @@ namespace ATM.Forms
             if (e.KeyCode == Keys.Enter)
             {
                 btnLogin.Focus();
+            }
+        }
+
+        private void frmLogin_Load(object sender, EventArgs e)
+        {
+            //MessageBox Before Login
+            Warkat model2 = new Warkat();
+            int total = model2.CountDataSourceByExpired();
+            if (total > 0)
+            {
+                DialogResult WarningMsg = XtraMessageBox.Show("Expired Due Date Total is " + total + " Data, Your must Login for Preview ?", "Due Date Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (WarningMsg == DialogResult.No)
+                {
+                    this.Close();
+                }
             }
         }
 
